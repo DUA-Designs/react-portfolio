@@ -1,7 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Nunito:wght@300&family=Roboto+Slab&display=swap');
- *{
+ 
+*{
     font-family: 'Barlow', sans-serif;
     transition:all 0.3s linear ;
+    padding: 0px;
+    margin: 0px;
  }
  html{
     scroll-behavior: smooth;

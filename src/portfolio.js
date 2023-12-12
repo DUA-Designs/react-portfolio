@@ -2,6 +2,7 @@ import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
  
+ const projects=[{link:"https://dua-designs.github.io/SurveyForm-fcc-/",name:"Survey Form",img:"https://dua-designs.github.io/portfolio/images/surveyform.png",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/tributepage",name:"Tribute Page",img:"https://dua-designs.github.io/portfolio/images/tribute.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/Documentation/",name:"Documentation",img:"https://dua-designs.github.io/portfolio/images/documentation.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/Productlandingpage/",name:"Product Landing Page",img:"https://dua-designs.github.io/portfolio/images/plp.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/RanQuoGen/",name:"Random Quote Generator",img:"https://dua-designs.github.io/portfolio/images/quote5.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/Drum_Machine/",name:"Drum machine",img:"https://dua-designs.github.io/portfolio/images/drummachine.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/Calculator/",name:"Calculator",img:"https://dua-designs.github.io/portfolio/images/calc.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/25-5clock/",name:"25-5 Clock",img:"https://dua-designs.github.io/portfolio/images/clock.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/react_app/",name:"UI Design",img:"	https://dua-designs.github.io/portfolio/images/fitpeoreact.PNG",tech:"Built with HTML, CSS, JavaScript, React"},{link:"https://dua-designs.github.io/bootstrapTemplate/",name:"Bootstrap Template",img:"	https://dua-designs.github.io/portfolio/images/bootInspan.png",tech:"Built with HTML, CSS, Bootstrap"}];
 
 export function Main(){
   const [date,setDate]=useState(new Date());
@@ -178,95 +179,19 @@ function quoteGenerator(){
       <section id="projects" className="p-4   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
       <div className="container text-center border rounded"  >
+
+       
         
       
         <div className="row py-1" >
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/SurveyForm-fcc-/">  Built with HTML, CSS</a></div> 
-                <a href="https://dua-designs.github.io/SurveyForm-fcc-/"> <img  src="https://dua-designs.github.io/portfolio/images/surveyform.png"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Survey Form</p>
+        {projects.map((item)=> <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
+                <div id="tech"  className="position-absolute"><a href={item.link}>{item.tech}</a></div> 
+                <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
+                    <p  id="caption">{item.name}</p>
                 </a> </div>
                  
                   
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/tributepage/">  Built with HTML, CSS</a></div> 
-                <a href="https://dua-designs.github.io/tributepage"> <img  src="https://dua-designs.github.io/portfolio/images/tribute.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Tribute Page</p>
-                </a> </div>
-                 
-                  
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/Documentation/">  Built with HTML, CSS</a></div> 
-                <a href="https://dua-designs.github.io/Documentation/"> <img  src="	https://dua-designs.github.io/portfolio/images/documentation.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Documentation</p>
-                </a> </div>
-                 
-                  
-            </div>
-       
-        
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/Productlandingpage/"> Built with HTML, CSS</a></div> 
-                <a href="https://dua-designs.github.io/Productlandingpage/"> <img  src="https://dua-designs.github.io/portfolio/images/plp.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Product Landing Page</p>
-                </a> </div>
-                 
-                  
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/RanQuoGen/"> Built with HTML, CSS, JavaScript </a></div> 
-                <a href="https://dua-designs.github.io/RanQuoGen/"> <img  src="https://dua-designs.github.io/portfolio/images/quote5.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Random Quote Generator</p>
-                </a> </div>
-                 
-                  
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/Drum_Machine/"> Built with HTML, CSS, JavaScript </a></div> 
-                <a href="https://dua-designs.github.io/Drum_Machine/"> <img  src="	https://dua-designs.github.io/portfolio/images/drummachine.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Drum machine</p>
-                </a> </div>
-                 
-                  
-            </div>
-        
-        
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/Calculator/">  Built with HTML, CSS, JavaScript </a></div> 
-                <a href="https://dua-designs.github.io/Calculator/"> <img  src="https://dua-designs.github.io/portfolio/images/calc.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Calculator</p>
-                </a> </div>
-                 
-                  
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/25-5clock/">   Built with HTML, CSS, JavaScript </a></div> 
-                <a href="https://dua-designs.github.io/25-5clock/"> <img  src="https://dua-designs.github.io/portfolio/images/clock.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">25-5 Clock</p>
-                </a> </div>
-                 
-                  
-            </div>
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/react_app/">  Built with HTML, CSS, JavaScript, React </a></div> 
-                <a href="https://dua-designs.github.io/react_app/"> <img  src="	https://dua-designs.github.io/portfolio/images/fitpeoreact.PNG"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">UI Design</p>
-                </a> </div>
-                 
-                  
-            </div>
-         
-      
-            <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href="https://dua-designs.github.io/bootstrapTemplate/">   Built with HTML, CSS, Bootstrap  </a></div> 
-                <a href="https://dua-designs.github.io/bootstrapTemplate/"> <img  src="	https://dua-designs.github.io/portfolio/images/bootInspan.png"  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">Bootstrap Template</p>
-                </a> </div>
-                 
-                  
-            </div>
+            </div>)}
             </div>
           
         
@@ -288,6 +213,9 @@ function quoteGenerator(){
               </div>
               <div className="carousel-item col-10">
                 <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+              </div>
+              <div className="carousel-item col-10">
+                <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
