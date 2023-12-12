@@ -86,14 +86,14 @@ function quoteGenerator(){
         function sendEmail(e){
             e.preventDefault();
           
-            let inputName3=document.getElementById("inputName3").value;
-            let inputEmail3=document.getElementById("inputEmail3").value;
-            let message=document.getElementById("inputMessage").value;
+            let inputName3=document.getElementById("inputName3") ;
+            let inputEmail3=document.getElementById("inputEmail3") ;
+            let message=document.getElementById("inputMessage") ;
             var templateParams = {
-              from_name:  inputName3,
-              emial_id:inputEmail3,
+              from_name:  inputName3.value,
+              emial_id:inputEmail3.value,
               to_name:"Aravind",
-              message
+              message:message.value
            
           
           };
@@ -102,9 +102,15 @@ function quoteGenerator(){
             emailjs.init("I4hRM78EXk7LdR9pC");
             emailjs.send('service_i12y271', 'template_l0cryvm',templateParams,"I4hRM78EXk7LdR9pC" ).then(function(response) {
                  alert('Your response has been recorded!', response.status, response.text);
+                 setTimeout(()=>{ inputEmail3.value="";
+             inputName3.value="";
+             message.value="";},200);
               }, function(error) {
                  alert('FAILED...', error);
               });
+             
+             
+              
           }
           function detailsInput(){
             document.getElementById("disappear").style.transform="scale(0)";
