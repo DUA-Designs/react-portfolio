@@ -123,7 +123,7 @@ function quoteGenerator(){
             document.getElementById("git").style.transform="scale(1)";
            },500)
           }
-    return (<>
+    return (<div style={{display:"grid",alignContent:"center"}}>
     
     <nav className="navbar navbar-expand-lg position-fixed w-100 z-3  ">
         <div className="container-fluid  " id="navContainer">
@@ -315,5 +315,5 @@ function quoteGenerator(){
     >
 <i className="fas fa-arrow-up"></i>
 </button>
-    </>)
+    </div>)
 }
