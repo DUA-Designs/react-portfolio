@@ -2,7 +2,19 @@ import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
  
- const projects=[{link:"https://dua-designs.github.io/SurveyForm-fcc-/",name:"Survey Form",img:"https://dua-designs.github.io/portfolio/images/surveyform.png",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/tributepage",name:"Tribute Page",img:"https://dua-designs.github.io/portfolio/images/tribute.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/Documentation/",name:"Documentation",img:"https://dua-designs.github.io/portfolio/images/documentation.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/Productlandingpage/",name:"Product Landing Page",img:"https://dua-designs.github.io/portfolio/images/plp.PNG",tech:"Built with HTML, CSS"},{link:"https://dua-designs.github.io/RanQuoGen/",name:"Random Quote Generator",img:"https://dua-designs.github.io/portfolio/images/quote5.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/Drum_Machine/",name:"Drum machine",img:"https://dua-designs.github.io/portfolio/images/drummachine.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/Calculator/",name:"Calculator",img:"https://dua-designs.github.io/portfolio/images/calc.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/25-5clock/",name:"25-5 Clock",img:"https://dua-designs.github.io/portfolio/images/clock.PNG",tech:"Built with HTML, CSS, JavaScript"},{link:"https://dua-designs.github.io/react_app/",name:"UI Design",img:"	https://dua-designs.github.io/portfolio/images/fitpeoreact.PNG",tech:"Built with HTML, CSS, JavaScript, React"},{link:"https://dua-designs.github.io/bootstrapTemplate/",name:"Bootstrap Template",img:"	https://dua-designs.github.io/portfolio/images/bootInspan.png",tech:"Built with HTML, CSS, Bootstrap"},{link:"https://dua-designs.github.io/toDoApp/",img:"https://dua-designs.github.io/myportfolio/images/toDoApp.png",name:"ToDo List App",tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"}];
+ const projects=[{link:"https://dua-designs.github.io/toDoApp/",img:"https://dua-designs.github.io/myportfolio/images/toDoApp.png",name:"ToDo List App",tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},
+ {link:"https://dua-designs.github.io/bootstrapTemplate/",name:"Bootstrap Template",img:"	https://dua-designs.github.io/portfolio/images/bootInspan.png",tech:"Built with HTML, CSS, Bootstrap"},
+ {link:"https://dua-designs.github.io/react_app/",name:"UI Design",img:"	https://dua-designs.github.io/portfolio/images/fitpeoreact.PNG",tech:"Built with HTML, CSS, JavaScript, React"},
+{link:"https://dua-designs.github.io/25-5clock/",name:"25-5 Clock",img:"https://dua-designs.github.io/portfolio/images/clock.PNG",tech:"Built with HTML, CSS, JavaScript"},
+{link:"https://dua-designs.github.io/Calculator/",name:"Calculator",img:"https://dua-designs.github.io/portfolio/images/calc.PNG",tech:"Built with HTML, CSS, JavaScript"},
+{link:"https://dua-designs.github.io/Drum_Machine/",name:"Drum machine",img:"https://dua-designs.github.io/portfolio/images/drummachine.PNG",tech:"Built with HTML, CSS, JavaScript"},
+{link:"https://dua-designs.github.io/RanQuoGen/",name:"Random Quote Generator",img:"https://dua-designs.github.io/portfolio/images/quote5.PNG",tech:"Built with HTML, CSS, JavaScript"},
+{link:"https://dua-designs.github.io/Productlandingpage/",name:"Product Landing Page",img:"https://dua-designs.github.io/portfolio/images/plp.PNG",tech:"Built with HTML, CSS"},
+{link:"https://dua-designs.github.io/Documentation/",name:"Documentation",img:"https://dua-designs.github.io/portfolio/images/documentation.PNG",tech:"Built with HTML, CSS"},
+{link:"https://dua-designs.github.io/tributepage",name:"Tribute Page",img:"https://dua-designs.github.io/portfolio/images/tribute.PNG",tech:"Built with HTML, CSS"},
+{link:"https://dua-designs.github.io/SurveyForm-fcc-/",name:"Survey Form",img:"https://dua-designs.github.io/portfolio/images/surveyform.png",tech:"Built with HTML, CSS"}
+
+];
 
 export function Main(){
   const [date,setDate]=useState(new Date());
@@ -73,10 +85,11 @@ function quoteGenerator(){
   
  setTimeout(()=>{
   setDate(new Date());
-  if(date.getHours()===23 && date.getMinutes()===55 && date.getSeconds()===10){
+  if(date.getHours()===14 && date.getMinutes()===40 && date.getSeconds()===10){
     quoteGenerator();
   
   }
+   
  },1000);
     }
         
@@ -184,6 +197,7 @@ function quoteGenerator(){
       </div>
       <section id="projects" className="p-4   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
+        <p>Projects are sorted from latest </p>
       <div className="container text-center border rounded"  >
 
        
@@ -245,19 +259,19 @@ function quoteGenerator(){
             <div className="col-10 mx-auto p-2 "   id="git" >
               <form method="post"  onSubmit={(event)=>sendEmail(event)}   >
                 <div className="row mb-3  p-2">
-                  <label for="inputName3" className="col-sm-4 col-form-label">Name</label>
+                  <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
                     <input type="text" className="form-control" id="inputName3" required />
                   </div>
                 </div>
                 <div className="row mb-3 p-2">
-                  <label for="inputEmail3" className="col-sm-4 col-form-label ">Email</label>
+                  <label  className="col-sm-4 col-form-label ">Email</label>
                   <div className="col-sm-8">
                     <input type="email" className="form-control" id="inputEmail3" required  />
                   </div>
                 </div>
                 <div className="row mb-3 p-2">
-                  <label for="inputMessage" className="col-sm-4 col-form-label ">Your Message</label>
+                  <label   className="col-sm-4 col-form-label ">Your Message</label>
                   <div className="col-sm-8">
                    <textarea name="" id="inputMessage" cols="30" rows="3" className="form-control"></textarea>
                   </div>
@@ -289,7 +303,7 @@ function quoteGenerator(){
             <div className="container">
                <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  " id="academy">
-            &copy; Copyright 2023 <strong>Insapanner Academy</strong>. All Rights Reserved 
+            &copy; Copyright 2023 <strong>Inspanner Academy</strong>. All Rights Reserved 
            <p className="  w-75 " id="designBy">Designed by <span  >Uday Aravind</span></p>
             </div>
             <div className="col ">
