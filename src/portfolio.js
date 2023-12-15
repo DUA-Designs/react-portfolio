@@ -85,7 +85,7 @@ function quoteGenerator(){
   
  setTimeout(()=>{
   setDate(new Date());
-  if(date.getHours()===14 && date.getMinutes()===40 && date.getSeconds()===10){
+  if(date.getHours()===14 && date.getMinutes()===58 && date.getSeconds()===10){
     quoteGenerator();
   
   }
