@@ -312,10 +312,10 @@ function quoteGenerator(){
             </div>
             <div className="  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 ">
               <a href="#twitter"><i className="fa-brands fa-twitter  rounded"></i></a>
-              <a href="https://www.facebook.com/dualifts/"><i className="fa-brands fa-facebook-f   rounded"></i></a>
+              <a href="https://www.facebook.com/dualifts/" target="blank"><i className="fa-brands fa-facebook-f   rounded"></i></a>
               <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a>
-              <a href="https://github.com/DUA-Designs"><i className="fa-brands fa-github   rounded"></i> </a>
-              <a href="https://www.linkedin.com/in/dasari-uday-aravind-385636225/"><i className="fa-brands fa-linkedin-in   rounded"></i></a>
+              <a href="https://github.com/DUA-Designs" target="blank"><i className="fa-brands fa-github   rounded"></i> </a>
+              <a href="https://www.linkedin.com/in/uday-aravind-dasari-385636225/" target="blank"><i className="fa-brands fa-linkedin-in   rounded"></i></a>
              
             </div>
           </div>
