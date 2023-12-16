@@ -161,6 +161,7 @@ function quoteGenerator(){
                 </a>
                 <ul className="dropdown-menu ">
                   <li><a className="dropdown-item text-dark" href="#prod">Contact Me</a></li>
+                  <li><a className="dropdown-item text-dark" href="https://drive.google.com/file/d/1lSiIX-Y7joPt2QeYAD76UP3Qjf51SnmH/view?usp=sharing" target="blank">View My Resume</a></li>
                   
                 </ul>
               </li>
