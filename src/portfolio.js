@@ -16,8 +16,13 @@ import emailjs from '@emailjs/browser';
 
 ];
 
+ 
+ 
+ 
+ 
+
 export function Main(){
-  const [date,setDate]=useState(new Date());
+   
 
     useEffect(()=>{
 
@@ -58,7 +63,7 @@ function quoteGenerator(){
     try {
       const response = fetch("https://dummyjson.com/quotes/random" );
        response.then((result)=> result.json()).then((data)=>{
-        console.log(data);
+        
       localStorage.setItem("quote",data.quote);
       localStorage.setItem("author",data.author);
          document.getElementById("quote").innerHTML=data.quote;
@@ -79,18 +84,36 @@ function quoteGenerator(){
     quoteGenerator();
   
   }
-   
-   
-  
-  
- setTimeout(()=>{
-  setDate(new Date());
-  if(date.getHours()===14 && date.getMinutes()===58 && date.getSeconds()===10){
+  let date=new Date();
+  let prevDate=localStorage.getItem("prevDateItem");
+if(prevDate){
+  if( date.getDate()!== Number(prevDate)){
+    localStorage.setItem("prevDateItem",date.getDate()+"");
     quoteGenerator();
+  }
+  
+
+}
+else{
+  localStorage.setItem("prevDateItem","0");
   
   }
+
+
+
+  
    
- },1000);
+
+
+
+
+
+   
+   
+  
+  
+   
+ 
     }
         
          );
