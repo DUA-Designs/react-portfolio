@@ -222,7 +222,7 @@ else{
       </div>
       <section id="projects" className="p-4   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <p>Projects are sorted from latest </p>
+        <p>Sorted from latest</p>
       <div className="container text-center border rounded"  >
 
        
