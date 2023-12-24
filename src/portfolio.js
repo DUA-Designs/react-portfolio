@@ -230,7 +230,7 @@ else{
       
         <div className="row py-1" >
         {projects.map((item)=> <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
-                <div id="tech"  className="position-absolute"><a href={item.link}>{item.tech}</a></div> 
+                <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
                 <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
                     <p  id="caption">{item.name}</p>
                 </a> </div>
