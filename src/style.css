@@ -223,6 +223,16 @@ background-color: #212529;
  display: none;
 }
 
+.hoverStyle:hover{
+    background-color:#d1cfcf;
+ 
+ 
+    color: black;
+
+   
+
+}
+
 
 @media (max-width:700px){
     #aboutMe{

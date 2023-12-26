@@ -197,21 +197,21 @@ else{
       <div className="container-fluid py-5" id="about">
         <div className="row d-flex p-3 align-items-center">
              
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2" id="aboutMe"> 
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2   rounded hoverStyle" id="aboutMe"> 
                
 			<h1><span className="fs-6">Hi, I am </span>Uday Aravind.</h1>
             
 			<h3><em>Aspiring Full Stack Developer.</em></h3>
 			<h6>{"I create <"} <span id="textChange"></span> {"/>"} </h6>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2"><p className="fs-6">Welcome to my Portfolio. Over here I showcase my
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle"><p className="fs-6">Welcome to my Portfolio. Over here I showcase my
                 extensive expertise to the world, including a diverse
                 range of projects, certifications, and achievements. This 
                 online portfolio will give an in-depth summary of my
                 skills, work/project history providing a comprehensive
                 view of my qualifications.
                 </p></div>
-                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-3 border-bottom   z-2" style={{backgroundColor: "rgb(209, 207, 207)",  color: "black"}} id="quoteContainer">
+                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-3      z-2" style={{backgroundColor: "rgb(209, 207, 207)",  color: "black"}} id="quoteContainer">
                   <h3 className="">Quote of the day</h3>
 
                   <em><i className="fa-solid fa-quote-left"></i> <blockquote id="quote" className="d-inline p-3" ></blockquote> <i className="fa-solid fa-quote-right"></i></em>
