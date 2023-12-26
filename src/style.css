@@ -81,6 +81,13 @@ nav *{
      }
      
 }
+#skills{
+    text-align: center;
+  
+    background-color: rgb(229, 224, 224);
+  
+    color: black;
+}
 #projects{
     text-align: center;
   
@@ -88,6 +95,7 @@ nav *{
   
     color: black;
 }
+
  
  
  
@@ -232,6 +240,26 @@ background-color: #212529;
    
 
 }
+#skills-container{
+ 
+    border-radius:10px;
+}
+#skills-container:hover{
+    background-color: white;
+}
+#skill-type{
+    padding-top: 2px;
+}
+#bar{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+#track{
+    
+        background-color:rgb(222, 154, 66);
+        height: 20px;
+}
 
 
 @media (max-width:700px){
@@ -267,6 +295,17 @@ background-color: #212529;
     #Submitme{
         width: 70% !important;
         font-size:12px ;
+    }
+    #skills h1{
+        font-size: 15px;
+
+    }
+    #skill-type h4{
+        font-size: 12px;
+    }
+    #track{
+ 
+        height:10px;
     }
     #projects h1{
         font-size: 15px;

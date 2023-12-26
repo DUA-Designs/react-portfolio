@@ -17,6 +17,7 @@ import dicegame from './images/diceGame.png';
 
 ];
 
+const skills=[{Language:"HTML",level:90},{Language:"CSS",level:85},{Language:"JavaScript",level:80},{Language:"React",level:75},{Language:"Java",level:70},{Language:"Bootstrap",level:65},{Language:"jQuery",level:50}];
  
  
  
@@ -194,7 +195,7 @@ else{
         </div>
       </nav>
 
-      <div className="container-fluid py-5" id="about">
+      <section className="container-fluid py-5" id="about">
         <div className="row d-flex p-3 align-items-center">
              
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2   rounded hoverStyle" id="aboutMe"> 
@@ -219,7 +220,16 @@ else{
                 </div>
         </div>
 
-      </div>
+      </section>
+      <section id="skills" className="py-5">
+        <div className="container">
+          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto bg-body-tertiary"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>My Skills</h1>
+          <div className="row py-2">
+           {skills.map((item,index)=> <div className="col-12 p-2 d-flex justify-content-between my-1 " key={index} id="skills-container"><div className="col-4" id="skill-type"><h4>{item.Language}</h4></div><div id="bar" className="col-8"><div id="track" style={{width:`${item.level}%`}}></div></div></div>)}
+
+          </div>
+        </div>
+      </section>
       <section id="projects" className="p-1   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <p>Sorted from latest</p>
