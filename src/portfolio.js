@@ -220,16 +220,16 @@ else{
         </div>
 
       </div>
-      <section id="projects" className="p-4   ">
+      <section id="projects" className="p-1   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <p>Sorted from latest</p>
-      <div className="container text-center border rounded"  >
+      <div className="container-fluid text-center border rounded"  >
 
        
         
       
         <div className="row py-1" >
-        {projects.map((item)=> <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-4 bg-white"> 
+        {projects.map((item)=> <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-2 bg-white"> 
                 <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
                 <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
                     <p  id="caption">{item.name}</p>
