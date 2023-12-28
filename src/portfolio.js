@@ -17,7 +17,7 @@ import dicegame from './images/diceGame.png';
 
 ];
 
-const skills=[{Language:"HTML",level:90},{Language:"CSS",level:85},{Language:"JavaScript",level:80},{Language:"React",level:75},{Language:"Java",level:70},{Language:"Bootstrap",level:65},{Language:"jQuery",level:50}];
+const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>},{Language:"CSS",level:85,icons:<i class="fa-brands fa-css3-alt"></i>},{Language:"JavaScript",level:80,icons:<i class="fa-brands fa-js"></i>},{Language:"React",level:75,icons:<i class="fa-brands fa-react"></i>},{Language:"Java",level:70,icons:<i class="fa-brands fa-java"></i>},{Language:"Bootstrap",level:65,icons:<i class="fa-brands fa-bootstrap"></i>},{Language:"jQuery",level:50,icons:""}];
  
  
  
@@ -225,7 +225,7 @@ else{
         <div className="container">
           <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto bg-body-tertiary"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>My Skills</h1>
           <div className="row py-2">
-           {skills.map((item,index)=> <div className="col-12 p-2 d-flex justify-content-between my-1 " key={index} id="skills-container"><div className="col-4" id="skill-type"><h4>{item.Language}</h4></div><div id="bar" className="col-8"><div id="track" style={{width:`${item.level}%`}}></div></div></div>)}
+           {skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 " key={index} id="skills-container"><div className="col-2" id="skills-icons">{item.icons}</div><div className="col-4" id="skill-type"><h4>{item.Language}</h4></div><div id="bar" className="col-4"><div id="track" style={{width:`${item.level}%`}}></div></div></div>)}
 
           </div>
         </div>

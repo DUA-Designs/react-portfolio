@@ -250,6 +250,9 @@ background-color: #212529;
 #skill-type{
     padding-top: 2px;
 }
+#skills-icons{
+    font-size: 2rem;
+}
 #bar{
     height: 100%;
     display: flex;
@@ -302,6 +305,9 @@ background-color: #212529;
     }
     #skill-type h4{
         font-size: 12px;
+    }
+    #skills-icons{
+        font-size: 1rem;
     }
     #track{
  
