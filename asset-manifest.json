@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.1fec711a.css",
-    "main.js": "/react-portfolio/static/js/main.b40b107f.js",
+    "main.css": "/react-portfolio/static/css/main.5d1213fa.css",
+    "main.js": "/react-portfolio/static/js/main.da77d8ea.js",
     "static/media/IMG20230618125208.jpg": "/react-portfolio/static/media/IMG20230618125208.35058feb97e89fa7ef09.jpg",
     "static/media/diceGame.png": "/react-portfolio/static/media/diceGame.b696c0a368a7fae03380.png",
     "index.html": "/react-portfolio/index.html",
-    "main.1fec711a.css.map": "/react-portfolio/static/css/main.1fec711a.css.map",
-    "main.b40b107f.js.map": "/react-portfolio/static/js/main.b40b107f.js.map"
+    "main.5d1213fa.css.map": "/react-portfolio/static/css/main.5d1213fa.css.map",
+    "main.da77d8ea.js.map": "/react-portfolio/static/js/main.da77d8ea.js.map"
   },
   "entrypoints": [
-    "static/css/main.1fec711a.css",
-    "static/js/main.b40b107f.js"
+    "static/css/main.5d1213fa.css",
+    "static/js/main.da77d8ea.js"
   ]
 }
