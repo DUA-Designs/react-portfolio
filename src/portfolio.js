@@ -2,8 +2,9 @@ import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
 import dicegame from './images/diceGame.png';
+import weatherAppDemo from './videos/weatherappDemo.mp4';
  
- const projects=[{link:"https://dua-designs.github.io/diceGame",name:"Dice Game",img:dicegame,tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},{link:"https://dua-designs.github.io/toDoApp/",img:"https://dua-designs.github.io/myportfolio/images/toDoApp.png",name:"ToDo List App",tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},
+ const projects=[{icon:<i class="fa-solid fa-cloud"></i>,git:"https://github.com/DUA-Designs/weatherAPI",demo:"https://dua-designs.github.io/weatherAPI/",completion:"January 2024",name:"Weather App",desc:"The Weather App uses a weather API to get the information using javascrit fetch. The data is then displayed as innerHTML of the  html elements. You will have to type the city name for which you want to get current weather details.",video:weatherAppDemo},{link:"https://dua-designs.github.io/diceGame",name:"Dice Game",img:dicegame,tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},{link:"https://dua-designs.github.io/toDoApp/",img:"https://dua-designs.github.io/myportfolio/images/toDoApp.png",name:"ToDo List App",tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},
  {link:"https://dua-designs.github.io/bootstrapTemplate/",name:"Bootstrap Template",img:"	https://dua-designs.github.io/portfolio/images/bootInspan.png",tech:"Built with HTML, CSS, Bootstrap"},
  {link:"https://dua-designs.github.io/react_app/",name:"UI Design",img:"	https://dua-designs.github.io/portfolio/images/fitpeoreact.PNG",tech:"Built with HTML, CSS, JavaScript, React"},
 {link:"https://dua-designs.github.io/25-5clock/",name:"25-5 Clock",img:"https://dua-designs.github.io/portfolio/images/clock.PNG",tech:"Built with HTML, CSS, JavaScript"},
@@ -19,7 +20,7 @@ import dicegame from './images/diceGame.png';
 
 const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>},{Language:"CSS",level:85,icons:<i class="fa-brands fa-css3-alt"></i>},{Language:"JavaScript",level:80,icons:<i class="fa-brands fa-js"></i>},{Language:"React",level:75,icons:<i class="fa-brands fa-react"></i>},{Language:"Java",level:70,icons:<i class="fa-brands fa-java"></i>},{Language:"Bootstrap",level:65,icons:<i class="fa-brands fa-bootstrap"></i>},{Language:"jQuery",level:50,icons:""}];
  
- 
+ let x=1;
  
  
 
@@ -27,6 +28,29 @@ export function Main(){
    
 
     useEffect(()=>{
+      if(x===1){
+        const url = 'https://quotes-by-api-ninjas.p.rapidapi.com/v1/quotes?category=inspirational';
+        const options = {
+          method: 'GET',
+          headers: {
+            'X-RapidAPI-Key': '6fbfebbdc6msh5f6f5ee3beae5d2p1fc4d9jsn61a0a7629cf5',
+            'X-RapidAPI-Host': 'quotes-by-api-ninjas.p.rapidapi.com'
+          }
+        };
+        
+        try {
+          const response =fetch(url, options);
+          response.then(res=>res.json()).then(data=>console.log(data));
+           
+          
+        } catch (error) {
+          console.error(error);
+        }
+        x++;
+      }
+
+
+
 
 
         
@@ -61,6 +85,7 @@ function backToTop() {
 }
 
 function quoteGenerator(){
+
 
     try {
       const response = fetch("https://dummyjson.com/quotes/random" );
@@ -123,10 +148,15 @@ else{
 
         function sendEmail(e){
             e.preventDefault();
+         
+
           
             let inputName3=document.getElementById("inputName3") ;
             let inputEmail3=document.getElementById("inputEmail3") ;
             let message=document.getElementById("inputMessage") ;
+
+           
+
             var templateParams = {
               from_name:  inputName3.value,
               emial_id:inputEmail3.value,
@@ -239,14 +269,16 @@ else{
         
       
         <div className="row py-1" >
-        {projects.map((item)=> <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-2 bg-white"> 
+        {projects.map((item)=> item.desc?<div className="col-11 border rounded mx-auto p-4 shadow bg-body-tertiary d-lg-flex d-md-flex my-2"><div className="col-lg-7 col-md-8 col-xs-12 col-sm-12 p-2"><video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video> </div>
+        <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-4"><h4>{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-4 ">{item.desc}</p><div className="d-flex justify-content-around"><a href={item.git} className="btn btn-dark">Code <i class="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></div>:
+        <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-2 bg-white"> 
                 <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
                 <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
                     <p  id="caption">{item.name}</p>
                 </a> </div>
                  
                   
-            </div>)}
+            </div>  )}
             </div>
           
         
