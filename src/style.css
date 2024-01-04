@@ -265,6 +265,7 @@ background-color: #212529;
 }
 
 
+
 @media (max-width:700px){
     #aboutMe{
         text-align: center;
@@ -334,6 +335,16 @@ background-color: #212529;
         
         
         left: 5%;
+    }
+    #projectDescription  {
+        font-size: 12px;
+    }
+    #projectDescription h4 {
+        font-size: 16px;
+    }
+    #projectDescription a{
+        font-size: 12px;
+
     }
 }
 

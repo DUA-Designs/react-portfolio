@@ -269,8 +269,8 @@ else{
         
       
         <div className="row py-1" >
-        {projects.map((item)=> item.desc?<div className="col-11 border rounded mx-auto p-4 shadow bg-body-tertiary d-lg-flex d-md-flex my-2"><div className="col-lg-7 col-md-8 col-xs-12 col-sm-12 p-2"><video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video> </div>
-        <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-4"><h4>{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-4 ">{item.desc}</p><div className="d-flex justify-content-around"><a href={item.git} className="btn btn-dark">Code <i class="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></div>:
+        {projects.map((item)=> item.desc?<div className="col-11 border rounded mx-auto p-lg-4 p-md-2 p-sm-1 p-xs-0 shadow bg-body-tertiary d-lg-flex d-md-flex my-2 p-1"><div className="col-lg-7 col-md-8 col-xs-12 col-sm-12 p-2"><video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video> </div>
+        <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-lg-4 p-md-2 p-sm-1 p-xs-0" id="projectDescription"><h4>{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-lg-4 p-md-2 p-sm-1 p-xs-0 ">{item.desc}</p><div className="d-flex justify-content-around col-12 "><a href={item.git} className="btn btn-dark col-5">Code <i class="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark col-5">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></div>:
         <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-2 bg-white"> 
                 <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
                 <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
