@@ -23,15 +23,17 @@ import quizAppDemo from './videos/quizAppDemo.mp4';
 
 const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>},{Language:"CSS",level:85,icons:<i class="fa-brands fa-css3-alt"></i>},{Language:"JavaScript",level:80,icons:<i class="fa-brands fa-js"></i>},{Language:"React",level:75,icons:<i class="fa-brands fa-react"></i>},{Language:"Java",level:70,icons:<i class="fa-brands fa-java"></i>},{Language:"Bootstrap",level:65,icons:<i class="fa-brands fa-bootstrap"></i>},{Language:"jQuery",level:50,icons:""}];
  
- let x=1;
+ 
  
  
 
 export function Main(){
+  const [quoteCheck,setQuoteCheck]=useState(0);
+  const [quote,setQuote]=useState([]);
    
 
     useEffect(()=>{
-      if(x===1){
+      /*if(x===1){
         const url = 'https://quotes-by-api-ninjas.p.rapidapi.com/v1/quotes?category=inspirational';
         const options = {
           method: 'GET',
@@ -43,7 +45,7 @@ export function Main(){
         
         try {
           const response =fetch(url, options);
-          response.then(res=>res.json()).then(data=>console.log(data));
+          response.then(res=>res.json()).then(data=> data);
            
           
         } catch (error) {
@@ -51,102 +53,83 @@ export function Main(){
         }
         x++;
       }
-
-
-
-
-
-        
- 
- 
-
-
- 
+      */
         let mybutton = document.getElementById("btn-back-to-top");
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        
+        function backToTop() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
 
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
-};
+    };
+});
 
-function scrollFunction() {
-  if (
-    document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 20
-  ) {
-    mybutton.style.display = "block";
-  } else {
-    mybutton.style.display = "none";
-  }
-}
-// When the user clicks on the button, scroll to the top of the document
-mybutton.addEventListener("click", backToTop);
-
-function backToTop() {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-}
-
-function quoteGenerator(){
+useEffect(()=>{
+  if(quoteCheck===0){
+   
+    async function quoteGenerator(){
 
 
-    try {
-      const response = fetch("https://dummyjson.com/quotes/random" );
-       response.then((result)=> result.json()).then((data)=>{
-        
-      localStorage.setItem("quote",data.quote);
-      localStorage.setItem("author",data.author);
-         document.getElementById("quote").innerHTML=data.quote;
-       document.getElementById("author").innerHTML=`Author-  ${data.author}`;
+      try {
+        const response =await fetch("https://dummyjson.com/quotes/random" );
+        const data = await response.json(); 
+          
+        localStorage.setItem("quote", data.quote);
+        localStorage.setItem("author",data.author);
+        setQuote([data.quote,`Author -  ${data.author}`]);
+       setTimeout(()=> setQuoteCheck(1),2000);
+         } catch (error) {
+        console.error(error);
+      }
+     }
+    let quote= localStorage.getItem("quote");
+    let author=localStorage.getItem("author");
+    if(quote){ 
       
-      });
-    } catch (error) {
-      console.error(error);
+      
+    setQuote([quote,`Author -  ${author}`]);
+    setTimeout(()=> setQuoteCheck(1),2000);
     }
-   }
-  let quote=localStorage.getItem("quote");
-  let author=localStorage.getItem("author");
-  if(quote){ 
-    document.getElementById("quote").innerHTML=quote;
-    document.getElementById("author").innerHTML=`Author-  ${author}`;
+    else{
+      quoteGenerator();
+    
+    }
+    let date=new Date();
+    let prevDate=localStorage.getItem("prevDateItem");
+  if(prevDate){
+    if( date.getDate()!== Number(prevDate)){
+      localStorage.setItem("prevDateItem",date.getDate()+"");
+       setQuoteCheck(0);
+      quoteGenerator();
+    }
+    
+  
   }
   else{
-    quoteGenerator();
-  
-  }
-  let date=new Date();
-  let prevDate=localStorage.getItem("prevDateItem");
-if(prevDate){
-  if( date.getDate()!== Number(prevDate)){
-    localStorage.setItem("prevDateItem",date.getDate()+"");
-    quoteGenerator();
-  }
-  
-
-}
-else{
-  localStorage.setItem("prevDateItem","0");
-  
-  }
-
-
-
-  
-   
-
-
-
-
-
-   
-   
-  
-  
-   
- 
+    localStorage.setItem("prevDateItem","0");
+    
     }
-        
-         );
+  }
+ 
+} ,[quoteCheck]);
+
+
+ 
 
 
         function sendEmail(e){
@@ -248,8 +231,8 @@ else{
                 <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-3      z-2" style={{backgroundColor: "rgb(209, 207, 207)",  color: "black"}} id="quoteContainer">
                   <h3 className="">Quote of the day</h3>
 
-                  <em><i className="fa-solid fa-quote-left"></i> <blockquote id="quote" className="d-inline p-3" ></blockquote> <i className="fa-solid fa-quote-right"></i></em>
-                  <p className="text-end" id="author" ></p>
+                  {quoteCheck===1?<div className="col-12"><i className="fa-solid fa-quote-left"></i> <blockquote id="quote" className="d-inline p-3" >{quote[0]}</blockquote> <i className="fa-solid fa-quote-right"></i> 
+                  <p className="text-end" id="author" >{quote[1]}</p></div>:<div class="lds-ripple  p-2"><div></div><div></div></div>} 
                 </div>
         </div>
 
