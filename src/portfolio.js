@@ -232,7 +232,7 @@ useEffect(()=>{
                   <h3 className="">Quote of the day</h3>
 
                   {quoteCheck===1?<div className="col-12"><i className="fa-solid fa-quote-left"></i> <blockquote id="quote" className="d-inline p-3" >{quote[0]}</blockquote> <i className="fa-solid fa-quote-right"></i> 
-                  <p className="text-end" id="author" >{quote[1]}</p></div>:<div class="lds-ripple  p-2"><div></div><div></div></div>} 
+                  <p className="text-end" id="author" >{quote[1]}</p></div>:<div class="lds-ripple pb-5 "><div></div><div></div></div>} 
                 </div>
         </div>
 
