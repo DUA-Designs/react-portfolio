@@ -358,7 +358,7 @@ useEffect(()=>{
             <div className="container">
                <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  " id="academy">
-            &copy; Copyright 2023 <strong>Inspanner Academy</strong>. All Rights Reserved 
+            &copy; Copyright 2024 <strong>Inspanner Academy</strong>. All Rights Reserved 
            <p className="  w-75 " id="designBy">Designed by <span  >Uday Aravind</span></p>
             </div>
             <div className="col ">
