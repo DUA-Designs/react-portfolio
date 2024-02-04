@@ -178,9 +178,9 @@ useEffect(()=>{
             document.getElementById("git").style.transform="scale(1)";
            },500)
           }
-    return (<div style={{height:"100vh",overflowX:"hidden",width:"100vw"}}>
+    return (<div  id="myApp"  >
     
-    <nav className="navbar navbar-expand-lg position-fixed   z-3  ">
+    <nav className="navbar navbar-expand-lg position-fixed w-100   z-3  ">
         <div className="container-fluid  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -250,7 +250,7 @@ useEffect(()=>{
       <section id="projects" className="p-1   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <p>Sorted from latest</p>
-      <div className="p-1  text-center border rounded"  >
+      <div className="p-2  text-center border rounded"  >
 
        
         
