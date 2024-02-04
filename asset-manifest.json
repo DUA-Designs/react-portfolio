@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.a12be024.css",
-    "main.js": "/react-portfolio/static/js/main.d3e336c0.js",
+    "main.js": "/react-portfolio/static/js/main.5009c58f.js",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/react-portfolio/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
     "static/media/IMG20230618125208.jpg": "/react-portfolio/static/media/IMG20230618125208.35058feb97e89fa7ef09.jpg",
     "static/media/diceGame.png": "/react-portfolio/static/media/diceGame.b696c0a368a7fae03380.png",
     "index.html": "/react-portfolio/index.html",
     "main.a12be024.css.map": "/react-portfolio/static/css/main.a12be024.css.map",
-    "main.d3e336c0.js.map": "/react-portfolio/static/js/main.d3e336c0.js.map"
+    "main.5009c58f.js.map": "/react-portfolio/static/js/main.5009c58f.js.map"
   },
   "entrypoints": [
     "static/css/main.a12be024.css",
-    "static/js/main.d3e336c0.js"
+    "static/js/main.5009c58f.js"
   ]
 }
