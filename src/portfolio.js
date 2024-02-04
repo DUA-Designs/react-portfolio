@@ -202,7 +202,7 @@ useEffect(()=>{
                 </a>
                 <ul className="dropdown-menu ">
                   <li><a className="dropdown-item text-dark" href="#prod">Contact Me</a></li>
-                  <li><a className="dropdown-item text-dark" href="https://drive.google.com/file/d/1lSiIX-Y7joPt2QeYAD76UP3Qjf51SnmH/view?usp=sharing" target="blank">View My Resume</a></li>
+                  <li><a className="dropdown-item text-dark" href="https://drive.google.com/file/d/1W_mLR2AKTj-g3g8srwzDJsawjR9i2JVo/view?usp=sharing" target="blank">View My Resume</a></li>
                   
                 </ul>
               </li>
@@ -365,7 +365,7 @@ useEffect(()=>{
              
             </div>
             <div className="  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 ">
-              <a href="#twitter"><i className="fa-brands fa-twitter  rounded"></i></a>
+              <a href="#twitter" target="blank"><i className="fa-brands fa-twitter  rounded"></i></a>
               <a href="https://www.facebook.com/dualifts/" target="blank"><i className="fa-brands fa-facebook-f   rounded"></i></a>
               <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a>
               <a href="https://github.com/DUA-Designs" target="blank"><i className="fa-brands fa-github   rounded"></i> </a>
