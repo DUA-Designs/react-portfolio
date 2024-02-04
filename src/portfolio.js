@@ -56,10 +56,12 @@ export function Main(){
       }
       */
         let mybutton = document.getElementById("btn-back-to-top");
+        let myApp=document.getElementById("myApp");
+
         function scrollFunction() {
+          console.log("working");
           if (
-            document.body.scrollTop > 20 ||
-            document.documentElement.scrollTop > 20
+               myApp.scrollTop> 20  
           ) {
             mybutton.style.display = "block";
           } else {
@@ -70,12 +72,11 @@ export function Main(){
         mybutton.addEventListener("click", backToTop);
         
         function backToTop() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
+         myApp.scrollTop=0;
         }
 
 // When the user scrolls down 20px from the top of the document, show the button
-window.onscroll = function () {
+myApp.onscroll = function () {
   scrollFunction();
     };
 });
@@ -168,19 +169,23 @@ useEffect(()=>{
               
           }
           function detailsInput(){
-            document.getElementById("disappear").style.transform="scale(0)";
-            document.getElementById("disappear").style.display="none";
+            document.getElementById("disappear").classList.add("activate");
+
+            setTimeout(()=>{
+              document.getElementById("disappear").style.display="none";
+             },500);
+           
 
  
           
            
            setTimeout(()=>{
             document.getElementById("git").style.transform="scale(1)";
-           },500)
+           },700);
           }
     return (<div  id="myApp"  >
     
-    <nav className="navbar navbar-expand-lg position-fixed w-100   z-3  ">
+    <nav className="navbar navbar-expand-lg position-fixed    z-3 ">
         <div className="container-fluid  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -388,14 +393,14 @@ useEffect(()=>{
         <section className="bg-black py-4" id="footLinks">
             <div className="container">
                <div className="row">
-            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  " id="academy">
+            <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  my-3  " id="academy">
             &copy; Copyright 2024 <strong>Inspanner Academy</strong>. All Rights Reserved 
-           <p className="  w-75 " id="designBy">Designed by <span  >Uday Aravind</span></p>
+           <p className="  w-75 py-3" id="designBy">Designed by <span  >Uday Aravind</span></p>
             </div>
             <div className="col ">
              
             </div>
-            <div className="  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 ">
+            <div className="  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 my-3">
               <a href="#twitter" target="blank"><i className="fa-brands fa-twitter  rounded"></i></a>
               <a href="https://www.facebook.com/dualifts/" target="blank"><i className="fa-brands fa-facebook-f   rounded"></i></a>
               <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a>
