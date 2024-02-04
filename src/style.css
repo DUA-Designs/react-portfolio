@@ -22,6 +22,10 @@ html::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px 1px rgb(91, 90, 90);
     background: transparent;
 }
+#root{
+    display: grid;
+    height: 100vh;
+}
 nav{
     background-color:white;
   
@@ -391,6 +395,13 @@ background-color: #212529;
     #projectDescription a{
         font-size: 12px;
 
+    }
+    #list-container{
+        margin: 0 auto;
+    }
+    #logo{
+        width: 50px;
+        height: 50px;
     }
     
 }

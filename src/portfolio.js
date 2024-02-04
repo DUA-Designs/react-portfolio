@@ -1,11 +1,12 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import dicegame from './images/diceGame.png';
-import weatherAppDemo from './videos/weatherappDemo.mp4';
-import quizAppDemo from './videos/quizAppDemo.mp4';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6} from './imageComponents';
+
  
- const projects=[{icon:<i class="fa-solid fa-cloud"></i>,git:"https://github.com/DUA-Designs/weatherAPI",demo:"https://dua-designs.github.io/weatherAPI/",completion:"January 2024",name:"Weather App",desc:"The Weather App uses a weather API to get the information using javascrit fetch. The data is then displayed as innerHTML of the  html elements. You will have to type the city name for which you want to get current weather details.",video:weatherAppDemo,linkedIn:"https://www.linkedin.com/posts/uday-aravind-dasari-385636225_infotrixs-infotrixsteam-infotrixsinternship-activity-7149757564606427136-yUzN?utm_source=share&utm_medium=member_desktop"},
+ const projects=[
+  {icon:<i class="fi fi-ss-cloud-code"></i>,git:"https://github.com/DUA-Designs/WeatherDashboard",demo:"https://dua-designs.github.io/WeatherDashboard/",completion:"January 2024",name:"Weather Dashboard",desc:"Fully functional Weather Dashboard offering wide range of data. Provide input details to get weather data.",carousel:[Pic1,Pic2,Pic3,Pic4,Pic5,Pic6]},
+ {icon:<i class="fa-solid fa-cloud"></i>,git:"https://github.com/DUA-Designs/weatherAPI",demo:"https://dua-designs.github.io/weatherAPI/",completion:"January 2024",name:"Current Weather",desc:"The Weather App uses a weather API to get the information using javascrit fetch. The data is then displayed as innerHTML of the  html elements. You will have to type the city name for which you want to get current weather details.",video:weatherAppDemo,linkedIn:"https://www.linkedin.com/posts/uday-aravind-dasari-385636225_infotrixs-infotrixsteam-infotrixsinternship-activity-7149757564606427136-yUzN?utm_source=share&utm_medium=member_desktop"},
  {icon:"",git:"https://github.com/DUA-Designs/quizApp",demo:"https://dua-designs.github.io/quizApp/",completion:"December 2023",name:"Quiz App",desc:"This is a template of a quiz App that I have designed. This quiz contains multiple choice questions and algorithms with code executable interface. To execute the code I have implemented a Java compiler API and UI has been designed with react,html,css. This personal project was a real tough one to create and I guess every challenge accomplished is a unique piece of development in me.",video:quizAppDemo},
  {link:"https://dua-designs.github.io/diceGame",name:"Dice Game",img:dicegame,tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},{link:"https://dua-designs.github.io/toDoApp/",img:"https://dua-designs.github.io/myportfolio/images/toDoApp.png",name:"ToDo List App",tech:"Built with HTML, CSS, Bootstrap, JavaScript, React"},
 {link:"https://dua-designs.github.io/bootstrapTemplate/",name:"Bootstrap Template",img:"	https://dua-designs.github.io/portfolio/images/bootInspan.png",tech:"Built with HTML, CSS, Bootstrap"},
@@ -177,16 +178,16 @@ useEffect(()=>{
             document.getElementById("git").style.transform="scale(1)";
            },500)
           }
-    return (<div style={{display:"grid",alignContent:"center"}}>
+    return (<div style={{height:"100vh"}}>
     
     <nav className="navbar navbar-expand-lg position-fixed w-100 z-3  ">
         <div className="container-fluid  " id="navContainer">
-          <a className="navbar-brand col-1" href="#dua" ><i className="fa-solid fa-image-portrait fa-lg"></i>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
+          <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  "></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul className="navbar-nav w-25   justify-content-around " id="list-container">
+            <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
               <li className="nav-item" id="link">
                 <a className="nav-link active" aria-current="page" href="#about">About</a>
               </li>
@@ -249,24 +250,54 @@ useEffect(()=>{
       <section id="projects" className="p-1   ">
         <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <p>Sorted from latest</p>
-      <div className="container-fluid text-center border rounded"  >
+      <div className="  text-center border rounded"  >
 
        
         
       
         <div className="row py-1" >
-        {projects.map((item)=> item.desc?<div className="col-11 border rounded mx-auto p-lg-4 p-md-2 p-sm-1 p-xs-0 shadow bg-body-tertiary d-lg-flex d-md-flex my-2 p-1"><div className="col-lg-7 col-md-8 col-xs-12 col-sm-12 p-2"><video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video> </div>
-        <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-lg-4 p-md-2 p-sm-1 p-xs-0" id="projectDescription"><h4>{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-lg-4 p-md-2 p-sm-1 p-xs-0 ">{item.desc}</p>
-        {item.linkedIn?<div className="p-1 m-1"><a className="btn btn-dark" href={item.linkedIn}>Working Detail <i class="fa-solid fa-circle-info"></i></a></div>:""}
-        <div className="d-flex justify-content-around col-12 "><a href={item.git} className="btn btn-dark col-5">Code <i class="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark col-5">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div></div>:
-        <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box"><div className="shadow border border rounded p-2 bg-white"> 
-                <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
-                <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
-                    <p  id="caption">{item.name}</p>
-                </a> </div>
-                 
-                  
-            </div>  )}
+        {projects.map((item)=> item.desc? 
+                                  <div className="col-11 border rounded mx-auto p-lg-4 p-md-2 p-sm-1 p-xs-0 shadow bg-body-tertiary d-lg-flex d-md-flex my-2 p-1">
+                                    <div className="col-lg-7 col-md-8 col-xs-12 col-sm-12 p-2  ">
+                                      {item.video?<video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video>:
+                                             <div id="carouselExampleSlidesOnly" className="carousel slide  " data-bs-ride="carousel">
+                                             <div className="carousel-inner">
+                                               <div className="carousel-item active">
+                                                 <img src={item.carousel[0]} className="d-block w-100 border rounded" alt="..."/>
+                                               </div>
+                                               {item.carousel.map((carouselItem,caroIndex)=>{
+                                                if(caroIndex>0){
+                                                  return (<div class="carousel-item"  >
+                                                 <img src={carouselItem} class="d-block w-100 border rounded" alt="..."/>
+                                               </div>);
+                                               }
+                                               else{
+                                                return "";
+                                               }
+                                               })
+                                              }
+                                               
+                                             </div>
+                                           </div>    
+                                      }
+                                    </div>
+                                  <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-lg-4 p-md-2 p-sm-1 p-xs-0" id="projectDescription">
+                                    <h4 className=" ">{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-lg-4 p-md-2 p-sm-1 p-xs-0 ">{item.desc}</p>
+                                    {item.linkedIn?<div className="p-1 m-1"><a className="btn btn-dark" href={item.linkedIn}>Working Detail <i class="fa-solid fa-circle-info"></i></a></div>:""}
+                                    <div className="d-flex justify-content-around col-12 "><a href={item.git} className="btn btn-dark col-5">Code <i class="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark col-5">Live Demo <i class="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+                                  </div>:
+
+
+                                  <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box">
+                                    <div className="shadow border border rounded p-2 bg-white"> 
+                                   <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
+                                    <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
+                                       <p  id="caption">{item.name}</p>
+                                      </a> 
+                                      </div>
+                                  </div> 
+                                  
+                      )}
             </div>
           
         
