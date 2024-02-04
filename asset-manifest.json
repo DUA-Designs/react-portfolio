@@ -1,10 +1,11 @@
 {
   "files": {
     "main.css": "/react-portfolio/static/css/main.3b610677.css",
-    "main.js": "/react-portfolio/static/js/main.9d1d95aa.js",
+    "main.js": "/react-portfolio/static/js/main.bd980a90.js",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/react-portfolio/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
     "static/media/IMG20230618125208.jpg": "/react-portfolio/static/media/IMG20230618125208.35058feb97e89fa7ef09.jpg",
+    "static/media/Infotrixs.png": "/react-portfolio/static/media/Infotrixs.9ffd09151a8f8e0b2adf.png",
     "static/media/diceGame.png": "/react-portfolio/static/media/diceGame.b696c0a368a7fae03380.png",
     "static/media/pic1.png": "/react-portfolio/static/media/pic1.7074158f30e7a7991d8e.png",
     "static/media/pic3.png": "/react-portfolio/static/media/pic3.3118360ef05e87ac3901.png",
@@ -14,10 +15,10 @@
     "static/media/pic4.png": "/react-portfolio/static/media/pic4.3f02a4cad73b9b3e74c9.png",
     "index.html": "/react-portfolio/index.html",
     "main.3b610677.css.map": "/react-portfolio/static/css/main.3b610677.css.map",
-    "main.9d1d95aa.js.map": "/react-portfolio/static/js/main.9d1d95aa.js.map"
+    "main.bd980a90.js.map": "/react-portfolio/static/js/main.bd980a90.js.map"
   },
   "entrypoints": [
     "static/css/main.3b610677.css",
-    "static/js/main.9d1d95aa.js"
+    "static/js/main.bd980a90.js"
   ]
 }
