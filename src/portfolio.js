@@ -1,7 +1,7 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6} from './imageComponents';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs} from './imageComponents';
 
  
  const projects=[
@@ -315,17 +315,21 @@ useEffect(()=>{
         <h1 className="p-4  w-75 mx-auto bg-body-tertiary  text-black   shadow border rounded position-relative">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <div id="carouselExampleRide" className="carousel slide p-5 " data-bs-ride="true">
             
-            <div className="carousel-inner ">
-              <div className="carousel-item active col-10">
+            <div className="carousel-inner p-lg-5 p-md-5">
+              <div className="carousel-item active col-10 p-lg-5 p-md-5">
+                <img src={infotrixs} className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+              </div>
+              <div className="carousel-item  col-10 p-lg-5 p-md-5">
                 <img src="https://dua-designs.github.io/portfolio/images/certi.png" className="d-block  mx-auto img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-10">
+              
+              <div className="carousel-item col-10 p-lg-5 p-md-5">
                 <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-10">
+              <div className="carousel-item col-10 p-lg-5 p-md-5">
                 <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-10">
+              <div className="carousel-item col-10 p-lg-5 p-md-5">
                 <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
               </div>
             </div>
