@@ -32,7 +32,7 @@ const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>
 export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
-   
+   const [bright,setBright]=useState(true);
 
     useEffect(()=>{
       /*if(x===1){
@@ -184,15 +184,38 @@ useEffect(()=>{
             document.getElementById("git").style.transform="scale(1)";
            },700);
           }
+          function handleBrightness(){
+
+            
+              document.getElementById("mrNav").classList.toggle("darkMode");
+              document.getElementById("theme").classList.toggle("darkMode");
+              document.getElementById("navContainer").classList.toggle("darkMode");
+              document.getElementById("skills").classList.toggle("darkMode");
+              document.getElementById("mySkills").classList.toggle("darkMode");
+               let skillsContainer=document.querySelectorAll(".skills-container");
+               console.log(skillsContainer);
+                 for(let i=0;i<skillsContainer.length;i++){
+                  skillsContainer[i].classList.toggle("darkMode");
+                 }
+                 document.getElementById("projects").classList.toggle("darkMode");
+                 document.getElementById("honed").classList.toggle("darkMode");
+                 document.getElementById("certifications").classList.toggle("darkMode");
+                 document.getElementById("myCerti").classList.toggle("darkMode");
+                 document.querySelector(".navbar-toggler").classList.toggle("darkMode");
+
+            
+             setBright(!bright);
+          }
     return (<div  id="myApp"  >
     
-    <nav className="navbar navbar-expand-lg position-fixed    z-3 ">
-        <div className="container-fluid  " id="navContainer">
+    <nav className="navbar navbar-expand-lg position-fixed    z-3 "id="mrNav">
+        <div className="container-fluid d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
+          <button className="p-2" id="theme" onClick={handleBrightness}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fi fi-ts-brightness"></i>}</button>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon  "></span>
+            <span className="navbar-toggler-icon  " id="navToggler"></span>
           </button>
-          <div className="collapse navbar-collapse" id="navbarNavDropdown">
+          <div className="collapse navbar-collapse  " id="navbarNavDropdown">
             <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
               <li className="nav-item" id="link">
                 <a className="nav-link active" aria-current="page" href="#about">About</a>
@@ -214,6 +237,7 @@ useEffect(()=>{
                 </ul>
               </li>
             </ul>
+            
           </div>
         </div>
       </nav>
@@ -246,17 +270,17 @@ useEffect(()=>{
       </section>
       <section id="skills" className="py-5">
         <div className="container">
-          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto bg-body-tertiary"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>My Skills</h1>
+          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  " id="mySkills"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>My Skills</h1>
           <div className="row py-2">
-           {skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 " key={index} id="skills-container"><div className="col-2" id="skills-icons">{item.icons}</div><div className="col-4" id="skill-type"><h4>{item.Language}</h4></div><div id="bar" className="col-4"><div id="track" style={{width:`${item.level}%`}}></div></div></div>)}
+           {skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)}
 
           </div>
         </div>
       </section>
       <section id="projects" className="p-1   ">
-        <h1 className="p-4 my-5 w-75 mx-auto bg-body-tertiary   text-black   shadow-lg border  rounded position-relative">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <p>Sorted from latest</p>
-      <div className="p-2  text-center border rounded"  >
+        <h1 className="p-4 my-5 w-75 mx-auto       shadow-lg border  rounded position-relative" id="honed">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
+        <p style={{color:`${bright?"black":"white"}`}}>Sorted from latest</p>
+      <div className="p-2  text-center   rounded"  >
 
        
         
@@ -313,7 +337,7 @@ useEffect(()=>{
       </div>
     </section>
     <section  id="certifications" className="py-4">
-        <h1 className="p-4  w-75 mx-auto bg-body-tertiary  text-black   shadow border rounded position-relative">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
+        <h1 className="p-4  w-75 mx-auto   shadow border rounded position-relative" id="myCerti">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
         <div id="carouselExampleRide" className="carousel slide p-5 " data-bs-ride="true">
             
             <div className="carousel-inner p-lg-5 p-md-5">

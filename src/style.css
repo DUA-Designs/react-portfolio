@@ -5,6 +5,7 @@
  
     padding: 0px;
     margin: 0px;
+    transition: 0.1s linear;
  }
  
   
@@ -36,10 +37,26 @@ nav{
   
     
 }
-nav *{
-    color: black !important;
+#mrNav.darkMode{
+    background-color: #32383e;
+    color: white;
+}
+ 
+.navbar-toggler.darkMode  {
+    color: rgb(198, 198, 198)  !important;
+   
+    background-color: white !important;
+
+}
+
+#navbarNavDropdown a{
+    color: black;
     text-align: center;
 }
+#navContainer.darkMode a{
+    color: white;
+}
+ 
 #link{
     border-radius: 5%;
 }
@@ -53,6 +70,32 @@ nav *{
  #author{
     font-size: 14px;
  }
+ #theme{
+    background-color: #1e1e1e;
+    border: none;
+   border-radius: 10px;
+   display: grid;
+   align-items: center;
+   position: absolute;
+    right: 30%;
+    top: 2%;
+
+  
+ }
+ #theme i{
+    font-size: 1.3rem;
+    color: white;
+ }
+ #theme.darkMode{
+    background-color: white;
+ }
+ #theme.darkMode i{
+    color: black;
+ }
+ #logo{
+    background-color: white;
+    
+ }
 @media (min-width:1000px){
     #list-container{
        
@@ -60,6 +103,11 @@ nav *{
      }
      #navContainer{
         padding: 0 5% 0 5%;
+        
+     }
+     #theme{
+        top:2px;
+        right: 1%;
      }
 }
  
@@ -70,6 +118,7 @@ nav *{
     background-size: cover;
     color:white;
 }
+ 
 #textChange::before{
     content: "Responsive Websites";
     animation: dynamicText 6s   infinite  ;
@@ -95,6 +144,10 @@ nav *{
   
     color: black;
 }
+#skills.darkMode{
+    background-color: #32383e;
+    color: white;
+}
 #projects{
     text-align: center;
   
@@ -102,7 +155,18 @@ nav *{
   
     color: black;
 }
+#projects.darkMode{
+     
+    background-color: #32383e;
 
+}
+#honed{
+    background-color: white;
+}
+#honed.darkMode{
+    background-color: #32383e;
+    color: white;
+}
  
  
  
@@ -157,6 +221,17 @@ height: 20%;
    
     text-align: center;
 }
+#certifications.darkMode{
+    background-color: #32383e;
+}
+#myCerti{
+    background-color: white;
+    color: black;
+}
+#myCerti.darkMode{
+    background-color: #32383e;
+    color: white;
+}
 .carousel-inner img{
     width: 85%;
 }
@@ -170,6 +245,12 @@ height: 20%;
     font-size: 1.5rem;
     text-align: center;
     
+}
+#mySkills{
+    background-color: white;
+}
+#mySkills.darkMode{
+    background-color: #32383e;
 }
 #product{
     color:white;
@@ -255,25 +336,28 @@ background-color: #212529;
    
 
 }
-#skills-container{
+.skills-container{
  
     border-radius:10px;
 }
-#skills-container:hover{
+.skills-container:hover{
     background-color: white;
 }
-#skill-type{
+.skills-container.darkMode:hover{
+    background-color: #4b545c;
+}
+.skill-type{
     padding-top: 2px;
 }
-#skills-icons{
+.skills-icons{
     font-size: 2rem;
 }
-#bar{
+.bar{
     height: 100%;
     display: flex;
     align-items: center;
 }
-#track{
+.track{
     
         background-color:rgb(222, 154, 66);
         height: 20px;
