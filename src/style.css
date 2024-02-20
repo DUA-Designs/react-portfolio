@@ -427,6 +427,11 @@ background-color: #212529;
     #tech a{
         font-size: 12px;
     }
+     
+    #theme{
+        
+        right: 16%;
+     }
     #academy{
         font-size: 15px;
         text-align: center;
