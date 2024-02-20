@@ -118,7 +118,9 @@ nav{
     background-size: cover;
     color:white;
 }
- 
+ #textChange{
+    text-wrap: nowrap;
+ }
 #textChange::before{
     content: "Responsive Websites";
     animation: dynamicText 6s   infinite  ;
