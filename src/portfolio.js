@@ -32,7 +32,7 @@ const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>
 export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
-   const [bright,setBright]=useState(true);
+   const [bright,setBright]=useState(false);
 
     useEffect(()=>{
       /*if(x===1){
@@ -211,7 +211,7 @@ useEffect(()=>{
     <nav className="navbar navbar-expand-lg position-fixed    z-3 "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
-          <button className="p-2" id="theme" onClick={handleBrightness}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fi fi-ts-brightness"></i>}</button>
+          <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}>{bright?<i className="fi fi-bs-brightness"></i>:<i class="fa-solid fa-moon"></i>}</button>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  " id="navToggler"></span>
           </button>

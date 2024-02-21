@@ -71,26 +71,26 @@ nav{
     font-size: 14px;
  }
  #theme{
-    background-color: #1e1e1e;
-    border: none;
-   border-radius: 10px;
-   display: grid;
-   align-items: center;
-   position: absolute;
-    right: 30%;
-    top: 2%;
+ position:relative;
+ left: 30%;
+ border-radius: 50%;
+
+ 
+   
+    
 
   
  }
+ #theme:hover{
+    background-color:  rgb(222, 154, 66);
+ }
  #theme i{
     font-size: 1.3rem;
-    color: white;
- }
- #theme.darkMode{
-    background-color: white;
- }
- #theme.darkMode i{
     color: black;
+ }
+  
+ #theme.darkMode i{
+    color: white;
  }
  #logo{
     background-color: white;
@@ -105,10 +105,7 @@ nav{
         padding: 0 5% 0 5%;
         
      }
-     #theme{
-        top:2px;
-        right: 1%;
-     }
+    
 }
  
 
@@ -432,7 +429,7 @@ background-color: #212529;
      
     #theme{
         
-        right: 23%;
+        
      }
     #academy{
         font-size: 15px;
