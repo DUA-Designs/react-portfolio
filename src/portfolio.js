@@ -279,7 +279,7 @@ useEffect(()=>{
       </section>
       <section id="projects" className="p-1   ">
         <h1 className="p-4 my-5 w-75 mx-auto       shadow-lg border  rounded position-relative" id="honed">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <p style={{color:`${bright?"black":"white"}`}}>Sorted from latest</p>
+        <p style={{color:`${bright?"white":"black"}`}}>Sorted from latest</p>
       <div className="p-2  text-center   rounded"  >
 
        
