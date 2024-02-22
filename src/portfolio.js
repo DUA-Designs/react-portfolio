@@ -320,7 +320,7 @@ useEffect(()=>{
               
               
                {category.map((item,index)=>
-                  <li key={ index} className="    p-3  headList">{"< "+item+" />"}
+                  <li key={ index} className="    p-3 p-xs-1  headList">{"< "+item+" />"}
                    <ul>
                     {subCat[item].map((sub,subIndex)=><li key={subIndex} className="subList col-lg-12 col-md-12 col-sm-12 col-11  p-2" ><div className="d-flex position-relative   align-items-center" id="subContainer"><span id={`lan${sub}`}>{sub} {individuals[sub].icon}</span> <span id={`percent${sub}`} className="percentText text-end   position-absolute"></span><span className="skillLevel position-absolute bottom-0 start-0" id={`line${sub}`}></span></div></li>)}
                    </ul>

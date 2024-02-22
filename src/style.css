@@ -473,11 +473,14 @@ background-color: #212529;
         
     }
     #categories .subList{
-        font-size: 20px;
+        font-size: 15px;
        
      }
+     #categories .headList{
+        font-size: 13px;
+     }
      .percentText{
-        font-size: 20px;
+        font-size: 15px;
      }
     #tech a{
         font-size: 12px;
