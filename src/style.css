@@ -16,6 +16,7 @@
     overflow-x: hidden;
  }
  #myApp::-webkit-scrollbar {
+  
     width: 0.8rem;
 }
  #myApp::-webkit-scrollbar-thumb {
