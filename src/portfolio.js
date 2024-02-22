@@ -338,24 +338,24 @@ useEffect(()=>{
     </section>
     <section  id="certifications" className="py-5">
         <h1 className="p-4  w-75 mx-auto   shadow border rounded position-relative" id="myCerti">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <div id="carouselExampleRide" className="carousel slide p-5  " data-bs-ride="true">
+        <div id="carouselExampleRide" className="carousel slide    " data-bs-ride="true">
             
             <div className="carousel-inner p-2  ">
               <div className="carousel-item active col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
-                <img src={infotrixs} className=" img-fluid" alt="certifaction_Image"/>
+                <img src={infotrixs} className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
               <div className="carousel-item  col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
-                <img src="https://dua-designs.github.io/portfolio/images/certi.png" className= "img-fluid" alt="certifaction_Image"/>
+                <img src="https://dua-designs.github.io/portfolio/images/certi.png" className= "img-fluid rounded" alt="certifaction_Image"/>
               </div>
               
               <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
-                <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className=" img-fluid" alt="certifaction_Image"/>
+                <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
               <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
-                <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className=" img-fluid" alt="certifaction_Image"/>
+                <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
               <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
-                <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className=" img-fluid" alt="certifaction_Image"/>
+                <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
