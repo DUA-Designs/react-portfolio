@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.b28b536d.css",
-    "main.js": "/react-portfolio/static/js/main.cf3b06b2.js",
+    "main.css": "/react-portfolio/static/css/main.f4a57d3b.css",
+    "main.js": "/react-portfolio/static/js/main.2467f2c7.js",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/react-portfolio/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
     "static/media/IMG20230618125208.jpg": "/react-portfolio/static/media/IMG20230618125208.35058feb97e89fa7ef09.jpg",
@@ -18,11 +18,11 @@
     "static/media/roxiler3.png": "/react-portfolio/static/media/roxiler3.58c26b30c7b2f553c7d4.png",
     "static/media/roxiler.png": "/react-portfolio/static/media/roxiler.6c7a0f5a92c1dbafe54a.png",
     "index.html": "/react-portfolio/index.html",
-    "main.b28b536d.css.map": "/react-portfolio/static/css/main.b28b536d.css.map",
-    "main.cf3b06b2.js.map": "/react-portfolio/static/js/main.cf3b06b2.js.map"
+    "main.f4a57d3b.css.map": "/react-portfolio/static/css/main.f4a57d3b.css.map",
+    "main.2467f2c7.js.map": "/react-portfolio/static/js/main.2467f2c7.js.map"
   },
   "entrypoints": [
-    "static/css/main.b28b536d.css",
-    "static/js/main.cf3b06b2.js"
+    "static/css/main.f4a57d3b.css",
+    "static/js/main.2467f2c7.js"
   ]
 }
