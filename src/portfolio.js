@@ -336,26 +336,26 @@ useEffect(()=>{
 
       </div>
     </section>
-    <section  id="certifications" className="py-4">
+    <section  id="certifications" className="py-5">
         <h1 className="p-4  w-75 mx-auto   shadow border rounded position-relative" id="myCerti">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <div id="carouselExampleRide" className="carousel slide p-5 " data-bs-ride="true">
+        <div id="carouselExampleRide" className="carousel slide p-5  " data-bs-ride="true">
             
-            <div className="carousel-inner p-lg-5 p-md-5">
-              <div className="carousel-item active col-10 p-lg-5 p-md-5">
-                <img src={infotrixs} className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+            <div className="carousel-inner p-2  ">
+              <div className="carousel-item active col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+                <img src={infotrixs} className=" img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item  col-10 p-lg-5 p-md-5">
-                <img src="https://dua-designs.github.io/portfolio/images/certi.png" className="d-block  mx-auto img-fluid" alt="certifaction_Image"/>
+              <div className="carousel-item  col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+                <img src="https://dua-designs.github.io/portfolio/images/certi.png" className= "img-fluid" alt="certifaction_Image"/>
               </div>
               
-              <div className="carousel-item col-10 p-lg-5 p-md-5">
-                <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+                <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className=" img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-10 p-lg-5 p-md-5">
-                <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+                <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className=" img-fluid" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-10 p-lg-5 p-md-5">
-                <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className="d-block   mx-auto img-fluid" alt="certifaction_Image"/>
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+                <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className=" img-fluid" alt="certifaction_Image"/>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">

@@ -232,7 +232,8 @@ height: 20%;
     color: white;
 }
 .carousel-inner img{
-    width: 85%;
+    width:  900px;
+    height: 600px;
 }
  #Icon{
     width: 50px;
@@ -479,6 +480,7 @@ background-color: #212529;
     }
     .carousel-inner img{
         width: 95%;
+        height: 300px;
     }
     #Icon{
         width: 30px;
