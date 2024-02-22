@@ -27,7 +27,7 @@ import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,in
  
  const category=["Programming Languages","Web Development Technologies","Front-end Technologies"];
  const subCat={"Programming Languages":["JavaScript","Java"],"Web Development Technologies":["React"],"Front-end Technologies":["HTML","CSS","Bootstrap","jQuery"]};
- const individuals={"JavaScript":{icon:<i class="fa-brands fa-js"></i>,lvl:80},"Java":{icon:<i class="fa-brands fa-java"></i>,lvl:60},"HTML":{icon:<i class="fa-brands fa-html5"></i>,lvl:90},"CSS":{icon:<i class="fa-brands fa-css3-alt"></i>,lvl:90},"React":{icon:<i class="fa-brands fa-react"></i>,lvl:70},"Bootstrap":{icon:<i class="fa-brands fa-bootstrap"></i>,lvl:60},"jQuery":""};
+ const individuals={"JavaScript":{icon:<i class="fa-brands fa-js"></i>,lvl:80},"Java":{icon:<i class="fa-brands fa-java"></i>,lvl:60},"HTML":{icon:<i class="fa-brands fa-html5"></i>,lvl:90},"CSS":{icon:<i class="fa-brands fa-css3-alt"></i>,lvl:90},"React":{icon:<i class="fa-brands fa-react"></i>,lvl:70},"Bootstrap":{icon:<i class="fa-brands fa-bootstrap"></i>,lvl:70},"jQuery":""};
  
  
  
