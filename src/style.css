@@ -231,7 +231,7 @@ height: 20%;
     background-color: #32383e;
     color: white;
 }
-.carousel-inner img{
+#certifications .carousel-inner img{
     width:  900px;
     height: 600px;
 }
@@ -478,7 +478,7 @@ background-color: #212529;
     #certifications h1{
         font-size: 15px;
     }
-    .carousel-inner img{
+    #certifications .carousel-inner img{
         width: 95%;
         height: 300px;
     }
