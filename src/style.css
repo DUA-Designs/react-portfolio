@@ -479,6 +479,10 @@ background-color: #212529;
      #categories .headList{
         font-size: 13px;
      }
+     #categories .subList i{
+        font-size: 17px;
+        
+       }
      .percentText{
         font-size: 15px;
      }
