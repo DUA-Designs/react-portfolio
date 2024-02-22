@@ -23,8 +23,11 @@ import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,in
 
 ];
 
-const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>},{Language:"CSS",level:85,icons:<i class="fa-brands fa-css3-alt"></i>},{Language:"JavaScript",level:80,icons:<i class="fa-brands fa-js"></i>},{Language:"React",level:75,icons:<i class="fa-brands fa-react"></i>},{Language:"Java",level:70,icons:<i class="fa-brands fa-java"></i>},{Language:"Bootstrap",level:65,icons:<i class="fa-brands fa-bootstrap"></i>},{Language:"jQuery",level:50,icons:""}];
+//const skills=[{Language:"HTML",level:90,icons:<i class="fa-brands fa-html5"></i>},{Language:"CSS",level:85,icons:<i class="fa-brands fa-css3-alt"></i>},{Language:"JavaScript",level:80,icons:<i class="fa-brands fa-js"></i>},{Language:"React",level:75,icons:<i class="fa-brands fa-react"></i>},{Language:"Java",level:70,icons:<i class="fa-brands fa-java"></i>},{Language:"Bootstrap",level:65,icons:<i class="fa-brands fa-bootstrap"></i>},{Language:"jQuery",level:50,icons:""}];
  
+ const category=["Programming Languages","Web Development Technologies","Front-end Technologies"];
+ const subCat={"Programming Languages":["JavaScript","Java"],"Web Development Technologies":["React"],"Front-end Technologies":["HTML","CSS","Bootstrap","jQuery"]};
+ const individuals={"JavaScript":{icon:<i class="fa-brands fa-js"></i>,lvl:80},"Java":{icon:<i class="fa-brands fa-java"></i>,lvl:60},"HTML":{icon:<i class="fa-brands fa-html5"></i>,lvl:90},"CSS":{icon:<i class="fa-brands fa-css3-alt"></i>,lvl:90},"React":{icon:<i class="fa-brands fa-react"></i>,lvl:70},"Bootstrap":{icon:<i class="fa-brands fa-bootstrap"></i>,lvl:60},"jQuery":""};
  
  
  
@@ -33,6 +36,7 @@ export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
    const [bright,setBright]=useState(false);
+ 
 
     useEffect(()=>{
       /*if(x===1){
@@ -60,13 +64,30 @@ export function Main(){
         let myApp=document.getElementById("myApp");
 
         function scrollFunction() {
-          console.log("working");
+          
           if (
                myApp.scrollTop> 20  
           ) {
             mybutton.style.display = "block";
           } else {
             mybutton.style.display = "none";
+          }
+
+          if(myApp.scrollTop>document.getElementById("about").offsetHeight*(0.7) ){
+            handleLevel("JavaScript");
+          }
+           if(myApp.scrollTop>document.getElementById("about").offsetHeight*(0.8) ){
+            handleLevel("Java");
+          }
+           if(myApp.scrollTop>document.getElementById("about").offsetHeight*(0.9) ){
+            handleLevel("React");
+          }
+           if(myApp.scrollTop>document.getElementById("about").offsetHeight*(1.2 ) ){
+            handleLevel("HTML");
+            handleLevel("CSS")
+          }
+           if(myApp.scrollTop>document.getElementById("about").offsetHeight*(1.3) ){
+            handleLevel("Bootstrap");
           }
         }
         // When the user clicks on the button, scroll to the top of the document
@@ -80,6 +101,10 @@ export function Main(){
 myApp.onscroll = function () {
   scrollFunction();
     };
+
+
+
+    
 });
 
 useEffect(()=>{
@@ -202,10 +227,27 @@ useEffect(()=>{
                  document.getElementById("certifications").classList.toggle("darkMode");
                  document.getElementById("myCerti").classList.toggle("darkMode");
                  document.querySelector(".navbar-toggler").classList.toggle("darkMode");
+                 document.getElementById("categories").classList.toggle("darkMode");
 
             
              setBright(!bright);
           }
+        async function  handleLevel(sub){
+          let id=`percent${sub}`;
+        if(Number(document.getElementById(id).innerHTML)!== individuals[sub].lvl && document.getElementById(id).innerHTML===""){
+                  for(let i=1;i<=individuals[sub].lvl;i++){
+                   document.getElementById(id).innerHTML=`${i} %`;
+                   document.getElementById(`line${sub}`).style.width=`${i}%`;
+                   let comparator=window.screen.width<=768?document.getElementById(`lan${sub}`).offsetWidth+50:document.getElementById(`lan${sub}`).offsetWidth+30;
+                   console.log(comparator);
+                   if(document.getElementById(`line${sub }`).offsetWidth>comparator){
+                    document.getElementById(id).classList.add("showMe");
+                    document.getElementById(id).style.width=`${i}%`;
+                   }
+                   await new Promise(resolve=>setTimeout(()=>resolve("This is for loading time"),40));
+                  }
+                }
+        }
     return (<div  id="myApp"  >
     
     <nav className="navbar navbar-expand-lg position-fixed    z-3 "id="mrNav">
@@ -269,11 +311,28 @@ useEffect(()=>{
 
       </section>
       <section id="skills" className="py-5">
-        <div className="container">
-          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  " id="mySkills"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>My Skills</h1>
-          <div className="row py-2">
-           {skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)}
-
+        <div className="container-fluid">
+          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  mb-5 " id="mySkills"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i class="fa-solid fa-brain"></i></span>Tech Stack</h1>
+          <div className="row py-4  ">
+           {/*skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)*/}
+             <div className=" col-11 mx-auto  text-start   bg-light rounded" id="categories">
+              <ul className="row     ">
+              
+              
+               {category.map((item,index)=>
+                  <li key={ index} className="    p-3  headList">{"< "+item+" />"}
+                   <ul>
+                    {subCat[item].map((sub,subIndex)=><li key={subIndex} className="subList col-lg-12 col-md-12 col-sm-12 col-11  p-2" ><div className="d-flex position-relative   align-items-center" id="subContainer"><span id={`lan${sub}`}>{sub} {individuals[sub].icon}</span> <span id={`percent${sub}`} className="percentText text-end   position-absolute"></span><span className="skillLevel position-absolute bottom-0 start-0" id={`line${sub}`}></span></div></li>)}
+                   </ul>
+                  </li>
+               )}
+               
+                 
+                
+                  
+              </ul>
+               
+              </div>
           </div>
         </div>
       </section>
