@@ -217,13 +217,13 @@ useEffect(()=>{
           </button>
           <div className="collapse navbar-collapse  " id="navbarNavDropdown">
             <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
-              <li className="nav-item" id="link">
+              <li className="nav-item" >
                 <a className="nav-link active" aria-current="page" href="#about">About</a>
               </li>
-              <li className="nav-item" id="link">
+              <li className="nav-item" >
                 <a className="nav-link" href="#projects">Projects</a>
               </li>
-              <li className="nav-item" id="link">
+              <li className="nav-item" >
                 <a className="nav-link" href="#certifications">Certifications</a>
               </li>
               <li className="nav-item dropdown">

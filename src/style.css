@@ -57,10 +57,10 @@ nav{
     color: white;
 }
  
-#link{
+.nav-item{
     border-radius: 5%;
 }
- #link:hover{
+.nav-item:hover{
     background-color: rgb(222, 154, 66);
  
  
