@@ -116,6 +116,9 @@ nav{
     background-size: cover;
     color:white;
 }
+#about h6{
+    text-wrap: nowrap;
+}
  #textChange{
     text-wrap: nowrap;
  }
@@ -158,10 +161,14 @@ nav{
 #categories ul{
     list-style-type: circle;
 }
- 
+#categories ul li{
+    padding: 0.8rem;
+}
+
 #categories .headList{
 font-size: 20px;
 font-weight: 700;
+text-wrap: nowrap;
 }
 #categories .subList{
     font-size: 30px;
@@ -476,6 +483,9 @@ background-color: #212529;
         font-size: 12px;
        
      }
+     #categories ul li{
+        padding: 0;
+    }
      #categories .headList{
         font-size: 10px;
      }

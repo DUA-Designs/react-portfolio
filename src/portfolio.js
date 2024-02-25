@@ -1,10 +1,11 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3} from './imageComponents';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts} from './media';
 
  
  const projects=[
+  {icon:<i class="fa-solid fa-play"></i>,git:"https://github.com/DUA-Designs/HelloAR",demo:"https://dua-designs.github.io/HelloAR/",completion:"February 2024",name:"Shorts App",desc:"Shorts App allows you to add videos that are oriented vertically and also scroll through the available ones. The working is similar to youtube shorts. This project is made with React App and it is a coding challenge given to me by HelloAR.",video:shorts},
   {icon:<i class="fa-solid fa-table-columns"></i>,git:"https://github.com/DUA-Designs/roxilerBackend",demo:"https://roxilerfront-end.onrender.com/",completion:"February 2024",name:"Transaction Dashboard",desc:"Functional Sales Dashboard featuring table for showing the items, sections for Statistics and barChart for price Ranges. This project is based on MERN Stack and it is a coding challenge given to me by  GEEKS-FOR-GEEKS for ROXILER company recruitment.",carousel:[Roxiler,Roxiler1,Roxiler2,Roxiler3]},
   {icon:<i class="fi fi-ss-cloud-code"></i>,git:"https://github.com/DUA-Designs/WeatherDashboard",demo:"https://dua-designs.github.io/WeatherDashboard/",completion:"January 2024",name:"Weather Dashboard",desc:"Fully functional Weather Dashboard offering wide range of data. Provide input details to get weather data.",carousel:[Pic1,Pic2,Pic3,Pic4,Pic5,Pic6]},
  {icon:<i class="fa-solid fa-cloud"></i>,git:"https://github.com/DUA-Designs/weatherAPI",demo:"https://dua-designs.github.io/weatherAPI/",completion:"January 2024",name:"Current Weather",desc:"The Weather App uses a weather API to get the information using javascrit fetch. The data is then displayed as innerHTML of the  html elements. You will have to type the city name for which you want to get current weather details.",video:weatherAppDemo,linkedIn:"https://www.linkedin.com/posts/uday-aravind-dasari-385636225_infotrixs-infotrixsteam-infotrixsinternship-activity-7149757564606427136-yUzN?utm_source=share&utm_medium=member_desktop"},
@@ -287,12 +288,10 @@ useEffect(()=>{
       <section className="container-fluid py-5" id="about">
         <div className="row d-flex p-3 align-items-center">
              
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2   rounded hoverStyle" id="aboutMe"> 
-               
-			<h1><span className="fs-6">Hi, I am </span>Uday Aravind.</h1>
-            
-			<h3><em>Aspiring Full Stack Developer.</em></h3>
-			<h6>{"I create <"} <span id="textChange"></span> {"/>"} </h6>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 py-3  rounded hoverStyle" id="aboutMe"> 
+               <h1><span className="fs-6">Hi, I am </span>Uday Aravind.</h1>
+                <h3><em>Aspiring Full Stack Developer.</em></h3>
+                <h6>{"I create <"} <span id="textChange"></span> {"/>"} </h6>
             </div>
             <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle"><p className="fs-6">Welcome to my Portfolio. Over here I showcase my
                 extensive expertise to the world, including a diverse
@@ -320,9 +319,9 @@ useEffect(()=>{
               
               
                {category.map((item,index)=>
-                  <li key={ index} className="    p-3   headList">{"< "+item+" />"}
+                  <li key={ index} className="       my-3 headList">{"< "+item+" />"}
                    <ul>
-                    {subCat[item].map((sub,subIndex)=><li key={subIndex} className="subList col-lg-12 col-md-12 col-sm-12 col-11  p-2" ><div className="d-flex position-relative   align-items-center" id="subContainer"><span id={`lan${sub}`}>{sub} {individuals[sub].icon}</span> <span id={`percent${sub}`} className="percentText text-end   position-absolute"></span><span className="skillLevel position-absolute bottom-0 start-0" id={`line${sub}`}></span></div></li>)}
+                    {subCat[item].map((sub,subIndex)=><li key={subIndex} className="subList col-lg-12 col-md-12 col-sm-12 col-11   my-3" ><div className="d-flex position-relative   align-items-center" id="subContainer"><span id={`lan${sub}`}>{sub} {individuals[sub].icon}</span> <span id={`percent${sub}`} className="percentText text-end   position-absolute"></span><span className="skillLevel position-absolute bottom-0 start-0" id={`line${sub}`}></span></div></li>)}
                    </ul>
                   </li>
                )}
