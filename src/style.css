@@ -123,21 +123,50 @@ nav{
     text-wrap: nowrap;
  }
 #textChange::before{
-    content: "Responsive Websites";
-    animation: dynamicText 6s   infinite  ;
+    content: "";
+     animation: dynamicText 24s   2s infinite  ;
+   
     color: rgb(222, 154, 66);
 
 }
+#blinkingCursor{
+    height: 100%;
+    
+    background-color: rgb(222, 154, 66);
+    margin: 0 2px;
+    animation: blinkIt 1s infinite;
+}
+@keyframes blinkIt {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+
+    
+}
 @keyframes dynamicText{
-     25%{
-        content: "Attractive Landing Pages";
-     }
-     50%{
-        content: "Interactive Web Applications";
-     }
-     75%{
-        content:"Well Documented Websites";
-     }
+    0%{content:""}0.70%{content:"A"}1.40%{content:"At"}2.10%{content:"Att"}2.80%{content:"Attr"}3.50%{content:"Attra"}4.20%{content:"Attrac"}4.90%{content:"Attract"}5.60%{content:"Attracti"}6.30%{content:"Attractiv"}7.00%{content:"Attractive"}7.70%{content:"Attractive "}8.40%{content:"Attractive L"}9.10%{content:"Attractive La"}9.80%{content:"Attractive Lan"}10.50%{content:"Attractive Land"}11.20%{content:"Attractive Landi"}11.90%{content:"Attractive Landin"}12.60%{content:"Attractive Landing"}13.30%{content:"Attractive Landing "}14.00%{content:"Attractive Landing P"}14.70%{content:"Attractive Landing Pa"}15.40%{content:"Attractive Landing Pag"}16.10%{content:"Attractive Landing Page"}16.80%{content:"Attractive Landing Pages"}
+
+    22%{content: "Attractive Landing Pages";} 23.14%{content:"Attractive Landing Page"}23.29%{content:"Attractive Landing Pag"}23.43%{content:"Attractive Landing Pa"}23.58%{content:"Attractive Landing P"}23.72%{content:"Attractive Landing "}23.87%{content:"Attractive Landing"}24.01%{content:"Attractive Landin"}24.16%{content:"Attractive Landi"}24.30%{content:"Attractive Land"}24.45%{content:"Attractive Lan"}24.59%{content:"Attractive La"}24.74%{content:"Attractive L"}24.88%{content:"Attractive "}25.03%{content:"Attractive"}25.17%{content:"Attractiv"}25.32%{content:"Attracti"}25.46%{content:"Attract"}25.61%{content:"Attrac"}25.75%{content:"Attra"}25.90%{content:"Attr"}26.04%{content:"Att"}26.19%{content:"At"}26.33%{content:"A"}26.48%{content:""}
+  
+  
+  
+  29%{content:""}29.60%{content:"I"}30.20%{content:"In"}30.80%{content:"Int"}31.40%{content:"Inte"}32.00%{content:"Inter"}32.60%{content:"Intera"}33.20%{content:"Interac"}33.80%{content:"Interact"}34.40%{content:"Interacti"}35.00%{content:"Interactiv"}35.60%{content:"Interactive"}36.20%{content:"Interactive "}36.80%{content:"Interactive W"}37.40%{content:"Interactive We"}38.00%{content:"Interactive Web"}38.60%{content:"Interactive Web "}39.20%{content:"Interactive Web A"}39.80%{content:"Interactive Web Ap"}40.40%{content:"Interactive Web App"}41.00%{content:"Interactive Web Appl"}41.60%{content:"Interactive Web Appli"}42.20%{content:"Interactive Web Applic"}42.80%{content:"Interactive Web Applica"}43.40%{content:"Interactive Web Applicat"}44.00%{content:"Interactive Web Applicati"}44.60%{content:"Interactive Web Applicatio"}45.20%{content:"Interactive Web Application"}45.80%{content:"Interactive Web Applications"}
+  
+  49%{content:"Interactive Web Applications"}50.14%{content:"Interactive Web Application"}50.28%{content:"Interactive Web Applicatio"}50.42%{content:"Interactive Web Applicati"}50.56%{content:"Interactive Web Applicat"}50.70%{content:"Interactive Web Applica"}50.84%{content:"Interactive Web Applic"}50.98%{content:"Interactive Web Appli"}51.12%{content:"Interactive Web Appl"}51.26%{content:"Interactive Web App"}51.40%{content:"Interactive Web Ap"}51.54%{content:"Interactive Web A"}51.68%{content:"Interactive Web "}51.82%{content:"Interactive Web"}51.96%{content:"Interactive We"}52.10%{content:"Interactive W"}52.24%{content:"Interactive "}52.38%{content:"Interactive"}52.52%{content:"Interactiv"}52.66%{content:"Interacti"}52.80%{content:"Interact"}52.94%{content:"Interac"}53.08%{content:"Intera"}53.22%{content:"Inter"}53.36%{content:"Inte"}53.50%{content:"Int"}53.64%{content:"In"}53.78%{content:"I"}53.92%{content:""}
+  
+  56%{content:""}56.61%{content:"W"}57.22%{content:"We"}57.83%{content:"Wel"}58.44%{content:"Well"}59.05%{content:"Well "}59.66%{content:"Well D"}60.27%{content:"Well Do"}60.88%{content:"Well Doc"}61.49%{content:"Well Docu"}62.10%{content:"Well Docum"}62.71%{content:"Well Docume"}63.32%{content:"Well Documen"}63.93%{content:"Well Document"}64.54%{content:"Well Documente"}65.15%{content:"Well Documented"}65.76%{content:"Well Documented "}66.37%{content:"Well Documented W"}66.98%{content:"Well Documented We"}67.59%{content:"Well Documented Web"}68.20%{content:"Well Documented Webs"}68.81%{content:"Well Documented Websi"}69.42%{content:"Well Documented Websit"}70.03%{content:"Well Documented Website"}70.64%{content:"Well Documented Websites"}
+  75%{content:"Well Documented Websites"}76.20%{content:"Well Documented Website"}76.40%{content:"Well Documented Websit"}76.60%{content:"Well Documented Websi"}76.80%{content:"Well Documented Webs"}77.00%{content:"Well Documented Web"}77.20%{content:"Well Documented We"}77.40%{content:"Well Documented W"}77.60%{content:"Well Documented "}77.80%{content:"Well Documented"}78.00%{content:"Well Documente"}78.20%{content:"Well Document"}78.40%{content:"Well Documen"}78.60%{content:"Well Docume"}78.80%{content:"Well Docum"}79.00%{content:"Well Docu"}79.20%{content:"Well Doc"}79.40%{content:"Well Do"}79.60%{content:"Well D"}79.80%{content:"Well "}80.00%{content:"Well"}80.20%{content:"Wel"}80.40%{content:"We"}80.60%{content:"W"}80.80%{content:""}
+  
+  83%{content:""}83.50%{content:"R"}84.00%{content:"Re"}84.50%{content:"Res"}85.00%{content:"Resp"}85.50%{content:"Respo"}86.00%{content:"Respon"}86.50%{content:"Respons"}87.00%{content:"Responsi"}87.50%{content:"Responsiv"}88.00%{content:"Responsive"}88.50%{content:"Responsive "}89.00%{content:"Responsive W"}89.50%{content:"Responsive We"}90.00%{content:"Responsive Web"}90.50%{content:"Responsive Webs"}91.00%{content:"Responsive Websi"}91.50%{content:"Responsive Websit"}92.00%{content:"Responsive Website"}92.50%{content:"Responsive Websites"}
+  
+  96.5%{content:"Responsive Websites"}97.15%{content:"Responsive Website"}97.30%{content:"Responsive Websit"}97.45%{content:"Responsive Websi"}97.60%{content:"Responsive Webs"}97.75%{content:"Responsive Web"}97.90%{content:"Responsive We"}98.05%{content:"Responsive W"}98.20%{content:"Responsive "}98.35%{content:"Responsive"}98.50%{content:"Responsiv"}98.65%{content:"Responsi"}98.80%{content:"Respons"}98.95%{content:"Respon"}99.10%{content:"Respo"}99.25%{content:"Resp"}99.40%{content:"Res"}99.55%{content:"Re"}99.70%{content:"R"}99.85%{content:""}
+  
      
 }
 #skills{
