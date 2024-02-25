@@ -35,6 +35,7 @@
 nav{
     background-color:white;
     width: 99%;
+    z-index: 99;
   
     
 }
@@ -183,6 +184,7 @@ nav{
 #categories{
   border-bottom: 8px solid rgb(222, 154, 66);
   transition: 0.3s linear;
+  position: relative;
 }
 #categories.darkMode{
     color: black;
@@ -206,6 +208,43 @@ text-wrap: nowrap;
 #categories .subList i{
  font-size: 35px;
  color: rgb(222, 154, 66);
+}
+.confidence{
+    position: absolute;
+    height: 100%;
+    
+   
+    top: 0;
+    right: 0;
+    display: flex;
+     align-items: center;
+     
+
+    padding: 0.8rem;
+     
+    
+}
+.textContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    height: 70%;
+    z-index: 1;
+     
+  
+}
+.lineHighlighter{
+    width: 1px;
+    height: 100%;
+    background-color: black;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    
+
+    
 }
 .skillLevel{
     height: 2px;

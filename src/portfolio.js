@@ -252,7 +252,7 @@ useEffect(()=>{
         }
     return (<div  id="myApp"  >
     
-    <nav className="navbar navbar-expand-lg position-fixed    z-3 "id="mrNav">
+    <nav className="navbar navbar-expand-lg position-fixed      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button>
@@ -331,6 +331,15 @@ useEffect(()=>{
                 
                   
               </ul>
+              <div className="confidence">
+                <div className="textContainer bg-light   rounded p-2">
+                  <span>L</span><span>e</span><span>v</span><span>e</span><span>l</span><span>&nbsp;</span>
+                  <span>O</span><span>f</span><span>&nbsp;</span>
+                  <span>C</span><span>o</span><span>n</span><span>f</span><span>i</span><span>d</span><span>e</span><span>n</span><span>c</span><span>e</span>
+                </div>
+                <div className="lineHighlighter"></div>
+
+              </div>
                
               </div>
           </div>
