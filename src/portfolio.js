@@ -294,9 +294,11 @@ useEffect(()=>{
                 <h3><em>Aspiring Full Stack Developer.</em></h3>
                 <h6>{"I create <"} <span id="textChange"></span><span id="blinkingCursor">&nbsp;</span> {"/>"} </h6>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle">
+            <div className="col"></div>
+            <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle">
                <p  >
-                Welcome to my Portfolio. Over here I showcase my
+                Welcome to my Portfolio!<br></br>
+                Over here I showcase my
                 extensive expertise to the world, including a diverse
                 range of projects, certifications, and achievements. This 
                 online portfolio will give an in-depth summary of my
