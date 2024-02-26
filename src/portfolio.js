@@ -294,18 +294,21 @@ useEffect(()=>{
                 <h3><em>Aspiring Full Stack Developer.</em></h3>
                 <h6>{"I create <"} <span id="textChange"></span><span id="blinkingCursor">&nbsp;</span> {"/>"} </h6>
             </div>
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle"><p className="fs-6">Welcome to my Portfolio. Over here I showcase my
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle">
+               <p  >
+                Welcome to my Portfolio. Over here I showcase my
                 extensive expertise to the world, including a diverse
                 range of projects, certifications, and achievements. This 
                 online portfolio will give an in-depth summary of my
                 skills, work/project history providing a comprehensive
                 view of my qualifications.
                 </p></div>
-                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-3      z-2" style={{backgroundColor: "rgb(209, 207, 207)",  color: "black"}} id="quoteContainer">
+                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-1      "   id="quoteContainer">
                   <h3 className="">Quote of the day</h3>
 
-                  {quoteCheck===1?<div className="col-12"><i className="fa-solid fa-quote-left"></i> <blockquote id="quote" className="d-inline p-3" >{quote[0]}</blockquote> <i className="fa-solid fa-quote-right"></i> 
-                  <p className="text-end" id="author" >{quote[1]}</p></div>:<div className="lds-ripple pb-5 "><div></div><div></div></div>} 
+                  {quoteCheck===1?<div className="col-12 d-grid align-items-center p-3" style={{ height:"100px"}}><span><i className="fa-solid fa-quote-left"></i> <span id="quote" className="   p-2" >{quote[0]}</span> <i className="fa-solid fa-quote-right"></i> </span>
+                  <p className="text-end my-1" id="author" >{quote[1]}</p></div>:
+                  <div className="lds-ripple   my-1"><div></div><div></div></div>} 
                 </div>
         </div>
 
