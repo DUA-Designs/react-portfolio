@@ -308,7 +308,7 @@ useEffect(()=>{
                 <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-1      "   id="quoteContainer">
                   <h3 className="">Quote of the day</h3>
 
-                  {quoteCheck===1?<div className="col-12 d-grid align-items-center p-3" style={{ height:"100px"}}><span><i className="fa-solid fa-quote-left"></i> <span id="quote" className="   p-2" >{quote[0]}</span> <i className="fa-solid fa-quote-right"></i> </span>
+                  {quoteCheck===1?<div className="  d-grid align-items-center p-3"  ><span><i className="fa-solid fa-quote-left"></i> <span id="quote" className="   p-2" >{quote[0]}</span> <i className="fa-solid fa-quote-right"></i> </span>
                   <p className="text-end my-1" id="author" >{quote[1]}</p></div>:
                   <div className="lds-ripple   my-1"><div></div><div></div></div>} 
                 </div>
