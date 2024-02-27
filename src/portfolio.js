@@ -196,7 +196,7 @@ useEffect(()=>{
            resp.classList.toggle("showMe");
            await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),200));
            if(response.status===200){
-            pResponse.innerHTML=`We got your message <i class="fa-solid fa-check"></i>`;
+            pResponse.innerHTML=`I got your message <i class="fa-solid fa-check"></i>`;
            await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
           inputEmail.value="";
           inputName.value="";
