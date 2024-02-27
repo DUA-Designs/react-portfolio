@@ -538,6 +538,46 @@ background-color: #212529;
     align-items: center;
 
   }
+  #spinner{
+    font-size: 1.3rem;
+    animation: spinMe 1s   infinite ;
+    color: white;
+  }
+  @keyframes spinMe{
+    from{
+        transform: rotateZ(0deg);
+    }
+    to{
+        transform: rotateZ(360deg);
+    }
+  }
+  #response{
+    
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    text-align: center;
+    background-color:  rgb(222, 154, 66);
+    display: grid;
+    align-items: center;
+    transform: scale(0);
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+
+     
+   
+  }
+  #response.showMe{
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+  
+    transition: 0.3s linear;
+  }
+  #Submitme{
+    background-color: rgb(222, 154, 66);
+  }
 
 @media screen and (max-width:700px){
     #aboutMe{

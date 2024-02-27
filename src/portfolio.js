@@ -2,7 +2,7 @@ import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
 import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts} from './media';
-
+import axios from 'axios';
  
 
  const projects=[
@@ -37,7 +37,8 @@ import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,in
 export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
-   const [bright,setBright]=useState(false);
+  const [bright,setBright]=useState(false);
+  const [processing,setProcessing]=useState(false); 
  
 
     useEffect(()=>{
@@ -162,40 +163,57 @@ useEffect(()=>{
  
 
 
-        function sendEmail(e){
+      async  function sendEmail(e){
             e.preventDefault();
+            setProcessing(true);
          
 
           
-            let inputName3=document.getElementById("inputName3") ;
-            let inputEmail3=document.getElementById("inputEmail3") ;
-            let message=document.getElementById("inputMessage") ;
-
+            let inputName=document.getElementById("inputName3") ;
+            let inputEmail=document.getElementById("inputEmail3"); 
+            let message=document.getElementById("inputMessage"); 
+            let resp=document.getElementById("response");
+            let pResponse=document.getElementById("pResponse");
            
 
             var templateParams = {
-              from_name:  inputName3.value,
-              emial_id:inputEmail3.value,
+              from_name:  inputName.value,
+              emial_id:inputEmail.value,
               to_name:"Aravind",
               message:message.value
            
           
           };
+
+             let acknowledged= await axios.get(`https://portfoliobackend-mmkw.onrender.com/sendData?userName=${inputName.value.trim()}&userEmail=${inputEmail.value.trim()}&userMessage=${message.value.trim()}`);
+              console.log(acknowledged.data);
+             
            
            
-            emailjs.init("I4hRM78EXk7LdR9pC");
-            emailjs.send('service_i12y271', 'template_l0cryvm',templateParams,"I4hRM78EXk7LdR9pC" ).then(function(response) {
-                 alert('Your response has been recorded!', response.status, response.text);
-                 setTimeout(()=>{ inputEmail3.value="";
-             inputName3.value="";
-             message.value="";},200);
-              }, function(error) {
-                 alert('FAILED...', error);
-              });
-             
-             
-              
-          }
+           emailjs.init("I4hRM78EXk7LdR9pC");
+           let response=await emailjs.send('service_i12y271', 'template_l0cryvm',templateParams,"I4hRM78EXk7LdR9pC" );
+           
+           resp.classList.toggle("showMe");
+           await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),200));
+           if(response.status===200){
+            pResponse.innerHTML=`We got your message <i class="fa-solid fa-check"></i>`;
+           await new Promise(resolve=>setTimeout(()=>resolve("This is just for loading time"),1000));
+          inputEmail.value="";
+          inputName.value="";
+          message.value=""; 
+           }
+           else{
+            pResponse.innerHTML=`Failed to get your message. Please try again. <i class="fa-solid fa-xmark"></i>`;
+           }
+          
+
+           setTimeout(()=>{
+            pResponse.innerHTML="";
+            resp.classList.toggle("showMe");
+          },5000);
+          setProcessing(false);
+            
+        }
           function detailsInput(){
             document.getElementById("disappear").classList.add("activate");
 
@@ -449,8 +467,8 @@ useEffect(()=>{
             <div className="row p-3 postiton-absolute"   >
                
                 
-            <div className="col-10 mx-auto p-2 "   id="git" >
-              <form method="post"  onSubmit={(event)=>sendEmail(event)}   >
+            <div className="col-10 mx-auto p-2 py-4"   id="git" >
+              <form method="post"  onSubmit={(event)=>sendEmail(event)}  className="position-relative" >
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
@@ -466,12 +484,13 @@ useEffect(()=>{
                 <div className="row mb-3 p-2">
                   <label   className="col-sm-4 col-form-label ">Your Message</label>
                   <div className="col-sm-8">
-                   <textarea name="" id="inputMessage" cols="30" rows="3" className="form-control"></textarea>
+                   <textarea name="" id="inputMessage" cols="30" rows="3" className="form-control" required></textarea>
                   </div>
                 </div>
                 
                  
-                <button type="submit" className="btn btn-danger d-block w-25 mx-auto" id="Submitme">Submit</button>
+                <button type="submit" className="btn   d-block w-25 mx-auto" id="Submitme">{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
+                <div id="response" ><p id="pResponse" className="fs-3"></p></div>
               </form>
           </div>
         </div>
