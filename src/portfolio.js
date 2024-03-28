@@ -3,7 +3,11 @@ import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
 import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts} from './media';
 import axios from 'axios';
+
+import { motion, useMotionValue } from "framer-motion"
  
+ 
+
 
  const projects=[
   {icon:<i className="fa-solid fa-play"></i>,git:"https://github.com/DUA-Designs/HelloAR",demo:"https://dua-designs.github.io/HelloAR/",completion:"February 2024",name:"Shorts App",desc:"Shorts App allows you to add videos that are oriented vertically and also scroll through the available ones. The working is similar to youtube shorts. This project is made with React App and it is a coding challenge given to me by HelloAR.",video:shorts},
@@ -156,8 +160,18 @@ useEffect(()=>{
     
     }
   }
+
+  const moveCursor = (e) => {   
+    cursorX.set(e.clientX -32)
+      cursorY.set(e.clientY -32)
+  }
+    window.addEventListener('mousemove', moveCursor)
+    return () => {
+      window.removeEventListener('mousemove', moveCursor)
+    }
+
  
-} ,[quoteCheck]);
+} ,[]);
 
 
  
@@ -268,12 +282,43 @@ useEffect(()=>{
                   }
                 }
         }
-    return (<div  id="myApp"  >
+
+     
+ const cursorX = useMotionValue(0);
+  const cursorY = useMotionValue(0);
+ const [cursorVariant,setCursorVariant]=useState("default");
+const variants={default:{  },
+    text:{
+         height: 80,
+    width: 80,
+  
+    
+
+    },techStack:{  height: 80,
+    width: 80,},
+    theme:{
+      width:50,height:50
+    }
+    
+    }  
+    const textEnter = () => setCursorVariant("text");
+const textLeave = () => setCursorVariant("default");
+const  techStack=()=>setCursorVariant("techStack");
+const themeEnter=()=>setCursorVariant("theme");
+ 
+
+    return (<div  id="myApp"  >  
+    < motion.div className="cursor"   style={{
+    translateX: cursorX,
+    translateY: cursorY,
+  }}   variants={variants}
+       animate={cursorVariant} />
+  
     
     <nav className="navbar navbar-expand-lg position-fixed      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
-          <a className="navbar-brand col-1" href="#dua" ><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
-          <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button>
+          <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
+          <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  " id="navToggler"></span>
           </button>
@@ -335,7 +380,7 @@ useEffect(()=>{
       </section>
       <section id="skills" className="py-5">
         <div className="container-fluid">
-          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  mb-5 " id="mySkills"><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon"><i className="fa-solid fa-brain"></i></span>Tech Stack</h1>
+          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  mb-5 " id="mySkills" ><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon" onMouseEnter={techStack} onMouseLeave={textLeave}><i className="fa-solid fa-brain"></i></span>Tech Stack</h1>
           <div className="row py-4  ">
            {/*skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)*/}
              <div className=" col-11 mx-auto  text-start   bg-light rounded" id="categories">
