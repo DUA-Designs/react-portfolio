@@ -541,7 +541,7 @@ const themeEnter=()=>setCursorVariant("theme");
                 
                  
                 <button   className="btn   d-block w-25 mx-auto g-recaptcha" id="Submitme" data-sitekey="6LczqKspAAAAAHShcerwxZ-4yKqiUkh2R3eigJBr" 
-        data-callback='reCaptchaCheck' 
+        data-callback='onSubmit' 
         data-action='submit'>{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
                 <div id="response" ><p id="pResponse" className="fs-3"></p></div>
               </form>
