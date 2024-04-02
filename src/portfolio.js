@@ -174,11 +174,12 @@ useEffect(()=>{
 } ,[]);
 
 
- 
 
 
       async  function sendEmail(e){
             e.preventDefault();
+
+            
             setProcessing(true);
          
 
@@ -286,6 +287,7 @@ useEffect(()=>{
      
  const cursorX = useMotionValue(0);
   const cursorY = useMotionValue(0);
+ 
  const [cursorVariant,setCursorVariant]=useState("default");
 const variants={default:{  },
     text:{
@@ -301,8 +303,12 @@ const variants={default:{  },
     }
     
     }  
-    const textEnter = () => setCursorVariant("text");
-const textLeave = () => setCursorVariant("default");
+    const textEnter = () =>{setCursorVariant("text");
+ 
+    } 
+const textLeave = () =>{ setCursorVariant("default");
+        
+}
 const  techStack=()=>setCursorVariant("techStack");
 const themeEnter=()=>setCursorVariant("theme");
  
@@ -513,7 +519,7 @@ const themeEnter=()=>setCursorVariant("theme");
                
                 
             <div className="col-10 mx-auto p-2 py-4"   id="git" >
-              <form method="post"  onSubmit={(event)=>sendEmail(event)}  className="position-relative" >
+              <form method="post"  onSubmit={(event)=>sendEmail(event)}  className="position-relative" id="contactForm" >
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
@@ -534,7 +540,9 @@ const themeEnter=()=>setCursorVariant("theme");
                 </div>
                 
                  
-                <button type="submit" className="btn   d-block w-25 mx-auto" id="Submitme">{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
+                <button   className="btn   d-block w-25 mx-auto g-recaptcha" id="Submitme" data-sitekey="6LczqKspAAAAAHShcerwxZ-4yKqiUkh2R3eigJBr" 
+        data-callback='reCaptchaCheck' 
+        data-action='submit'>{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
                 <div id="response" ><p id="pResponse" className="fs-3"></p></div>
               </form>
           </div>
