@@ -3,6 +3,8 @@ import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
 import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts} from './media';
 import axios from 'axios';
+ 
+
 
 import { motion, useMotionValue } from "framer-motion"
  
@@ -43,6 +45,8 @@ export function Main(){
   const [quote,setQuote]=useState([]);
   const [bright,setBright]=useState(false);
   const [processing,setProcessing]=useState(false); 
+
+ 
  
 
     useEffect(()=>{
@@ -174,13 +178,15 @@ useEffect(()=>{
 } ,[]);
 
 
-
+ 
 
       async  function sendEmail(e){
             e.preventDefault();
+            
 
             
             setProcessing(true);
+               
          
 
           
@@ -538,11 +544,11 @@ const themeEnter=()=>setCursorVariant("theme");
                    <textarea name="" id="inputMessage" cols="30" rows="3" className="form-control" required></textarea>
                   </div>
                 </div>
+               
                 
                  
-                <button   className="btn   d-block w-25 mx-auto g-recaptcha" id="Submitme" data-sitekey="6LczqKspAAAAAHShcerwxZ-4yKqiUkh2R3eigJBr" 
-        data-callback='onSubmit' 
-        data-action='submit'>{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
+                <button   className="btn   d-block w-25 mx-auto g-recaptcha" type="submit" id="Submitme" 
+         >{processing?<i id="spinner" className="fa-solid fa-compact-disc"></i>:"Submit"}</button>
                 <div id="response" ><p id="pResponse" className="fs-3"></p></div>
               </form>
           </div>
