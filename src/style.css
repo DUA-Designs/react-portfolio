@@ -55,11 +55,25 @@
 }
 nav{
     background-color:white;
-    width: 99%;
+   
     z-index: 99;
+   
+   position: sticky !important;
+ 
+   transform: translateY(-4px);
+   
   
     
 }
+ 
+nav.makeSticky{
+   
+    top: 1px !important;
+    box-shadow: 0 4px 2px -2px rgba(0, 0, 0, 0.2); 
+     
+}
+
+
 #mrNav.darkMode{
     background-color: #32383e;
     color: white;
@@ -125,7 +139,7 @@ nav{
         margin-left: 65%;
      }
      #navContainer{
-        padding: 0 5% 0 5%;
+        padding: 0  5%;
         
      }
     
@@ -137,7 +151,8 @@ nav{
     background-position: top;
     background-size: cover;
     color:white;
-    margin-top: 20px;
+      transform: translateY(-4px);
+    
 }
 #about h6{
     text-wrap: nowrap;
@@ -600,17 +615,12 @@ background-color: #212529;
     background-color: rgb(222, 154, 66);
   }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:768px){
     #aboutMe{
         text-align: center;
   
     }
-    nav{
-     
-        width: 97.5%;
-      
-        
-    }
+    
     #categories .subList{
         font-size: 12px;
        

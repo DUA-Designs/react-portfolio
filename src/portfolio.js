@@ -73,8 +73,12 @@ export function Main(){
       */
         let mybutton = document.getElementById("btn-back-to-top");
         let myApp=document.getElementById("myApp");
+        let mrNav=document.getElementById("mrNav");
 
         function scrollFunction() {
+          if(myApp.scrollTop>1){
+            mrNav.classList.add("makeSticky");
+          }
           
           if (
                myApp.scrollTop> 20  
@@ -306,9 +310,8 @@ const variants={default:{  },
     width: 80,},
     theme:{
       width:50,height:50
-    }
-    
-    }  
+    },navLinks:{height:80,width:80}
+  }  
     const textEnter = () =>{setCursorVariant("text");
  
     } 
@@ -317,6 +320,7 @@ const textLeave = () =>{ setCursorVariant("default");
 }
 const  techStack=()=>setCursorVariant("techStack");
 const themeEnter=()=>setCursorVariant("theme");
+const navLinks=()=>setCursorVariant("navLinks");
  
 
     return (<div  id="myApp"  >  
@@ -327,7 +331,7 @@ const themeEnter=()=>setCursorVariant("theme");
        animate={cursorVariant} />
   
     
-    <nav className="navbar navbar-expand-lg position-fixed      "id="mrNav">
+    <nav className="navbar navbar-expand-lg      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button>
@@ -337,13 +341,13 @@ const themeEnter=()=>setCursorVariant("theme");
           <div className="collapse navbar-collapse  " id="navbarNavDropdown">
             <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
               <li className="nav-item" >
-                <a className="nav-link active" aria-current="page" href="#about">About</a>
+                <motion.a className="nav-link active" aria-current="page" href="#about" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}> About </motion.a>
               </li>
               <li className="nav-item" >
-                <a className="nav-link" href="#projects">Projects</a>
+                <motion.a className="nav-link" href="#projects" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}>Projects</motion.a>
               </li>
               <li className="nav-item" >
-                <a className="nav-link" href="#certifications">Certifications</a>
+                <motion.a className="nav-link" href="#certifications" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}>Certifications</motion.a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#others" role="button" data-bs-toggle="dropdown" aria-expanded="false">
