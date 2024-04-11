@@ -323,7 +323,7 @@ const themeEnter=()=>setCursorVariant("theme");
 const navLinks=()=>setCursorVariant("navLinks");
  
 
-    return (<div  id="myApp"  >  
+    return (<div  id="myApp" className="devRow" >  
     < motion.div className="cursor"   style={{
     translateX: cursorX,
     translateY: cursorY,
@@ -405,7 +405,7 @@ const navLinks=()=>setCursorVariant("navLinks");
 
                   
             
-             <div className="row     devRow shadow rounded py-4   ">
+             <div className="row       shadow rounded py-4   ">
           
                <div className="  mx-auto  d-flex flex-wrap justify-content-around align-items-center">
                <div  className="   ">
