@@ -14,5 +14,6 @@ import Roxiler from './images/roxiler.png';
 import Roxiler1 from './images/roxiler1.png';
 import Roxiler2 from './images/roxiler2.png';
 import Roxiler3 from './images/roxiler3.png';
+import dev from './images/developer.png';
 
-export {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs,Roxiler,Roxiler1,Roxiler2,Roxiler3,shorts};
+export {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs,Roxiler,Roxiler1,Roxiler2,Roxiler3,shorts,dev};

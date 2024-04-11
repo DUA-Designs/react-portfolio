@@ -1,7 +1,7 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts} from './media';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev} from './media';
 import axios from 'axios';
  
 
@@ -341,13 +341,13 @@ const navLinks=()=>setCursorVariant("navLinks");
           <div className="collapse navbar-collapse  " id="navbarNavDropdown">
             <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
               <li className="nav-item" >
-                <motion.a className="nav-link active" aria-current="page" href="#about" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}> About </motion.a>
+                <motion.a className="nav-link active" aria-current="page" href="#about" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}  > About </motion.a>
               </li>
               <li className="nav-item" >
-                <motion.a className="nav-link" href="#projects" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}>Projects</motion.a>
+                <motion.a className="nav-link" href="#projects" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}  >Projects</motion.a>
               </li>
               <li className="nav-item" >
-                <motion.a className="nav-link" href="#certifications" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}>Certifications</motion.a>
+                <motion.a className="nav-link" href="#certifications" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}  >Certifications</motion.a>
               </li>
               <li className="nav-item dropdown">
                 <a className="nav-link dropdown-toggle" href="#others" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -384,22 +384,74 @@ const navLinks=()=>setCursorVariant("navLinks");
                 skills, work/project history providing a comprehensive
                 view of my qualifications.
                 </p></div>
-                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-1      "   id="quoteContainer">
+                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-1  position-relative    "   id="quoteContainer">
+                <i className="fa-solid fa-quote-left position-absolute start-0 top-0 m-1"></i>
+                <i className="fa-solid fa-quote-right position-absolute bottom-0 end-0  m-1"></i>
                   <h3 className="">Quote of the day</h3>
 
-                  {quoteCheck===1?<div className="  d-grid align-items-center p-3"  ><span><i className="fa-solid fa-quote-left"></i> <span id="quote" className="   p-2" >{quote[0]}</span> <i className="fa-solid fa-quote-right"></i> </span>
-                  <p className="text-end my-1" id="author" >{quote[1]}</p></div>:
+                  {quoteCheck===1?<div className="  d-grid align-items-center p-1 text-end"  >  <span id="quote" className="   p-2" >{quote[0]}
+                  <br/><span className="  mt-1 mb-3  " id="author" >{quote[1]}</span>
+                  </span>  
+                  </div>:
                   <div className="lds-ripple   my-1"><div></div><div></div></div>} 
                 </div>
         </div>
 
       </section>
+       
+
+    
+  <section className="container    py-4">
+
+                  
+            
+             <div className="row     devRow shadow rounded py-4   ">
+          
+               <div className="  mx-auto  d-flex flex-wrap justify-content-around align-items-center">
+               <div  className="   ">
+                  
+                                <ul className="workingList  ">
+                                  <li  >
+                                    <div class="icon"><div class='pulse'></div></div>
+                                    <div class="title">Current Status</div>
+                                    <div class="descr">   Working</div>
+                                  </li>
+                                  
+                                </ul>
+ 
+               </div>
+                    <div className="   "> 
+                    
+                     
+                            <ul class="statusList alternating-colors   ">
+                                  <li>
+                                    <strong>Designation</strong>
+                                    <p>Web Developer</p>
+                                  </li>
+                                  <li>
+                                    <strong>Company</strong>
+                                    <p>G-Rank Digital Services Private Limited</p>
+                                  </li>
+                                  <li>
+                                    <strong>Timeline</strong>
+                                    <p>28th Feb 2024 - Now</p>
+                                  </li>
+                                  
+                                </ul>
+                    </div>
+                    <div className="  "><img src={dev} alt="dev" className="devImg d-block mx-auto "/></div>
+               </div>
+             </div>
+         </section>
+
+    
+
       <section id="skills" className="py-5">
-        <div className="container-fluid">
+        <div className="container ">
           <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  mb-5 " id="mySkills" ><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon" onMouseEnter={techStack} onMouseLeave={textLeave}><i className="fa-solid fa-brain"></i></span>Tech Stack</h1>
           <div className="row py-4  ">
            {/*skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)*/}
-             <div className=" col-11 mx-auto  text-start   bg-light rounded" id="categories">
+             <div className=" col-12  text-start   bg-light rounded" id="categories">
               <ul className="row     ">
               
               
@@ -578,8 +630,8 @@ const navLinks=()=>setCursorVariant("navLinks");
             <div className="container">
                <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  my-3  " id="academy">
-            &copy; Copyright 2024 <strong>Inspanner Academy</strong>. All Rights Reserved 
-           <p className="  w-75 py-3" id="designBy">Designed by <span  >Uday Aravind</span></p>
+         
+           <p className="  w-75 py-3" id="designBy">   &copy; Copyright 2024 <span  > Dua-Designs</span></p>
             </div>
             <div className="col ">
              

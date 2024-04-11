@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@1,600&family=Nunito:wght@300&family=Roboto+Slab&display=swap');
  
+ 
 *{
     font-family: 'Barlow', sans-serif;
  
     padding: 0px;
     margin: 0px;
     transition:all 0.06s linear;
+    
+ -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizelegibility;
   
  }
  
@@ -15,6 +20,7 @@
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    background-color: rgb(229, 224, 224);
  
  }
  
@@ -29,7 +35,7 @@
   background-color: white;
   z-index:99999;
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode:difference;
  
 }
 
@@ -106,6 +112,10 @@ nav.makeSticky{
  
  #author{
     font-size: 14px;
+    width: fit-content;
+    display: block;
+    margin-left: auto;
+      
  }
  #theme{
  position:relative;
@@ -133,6 +143,238 @@ nav.makeSticky{
     background-color: white;
     
  }
+
+ .workingList {
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+ 
+}
+
+.workingList li {
+  max-width: 12rem;
+  justify-self: center;
+  display: grid;
+  grid-template:
+    "icon"
+    "line"
+    "dot"
+    "title"
+    "descr" 1fr;
+  justify-items: center;
+  align-items: flex-start;
+  text-align: center;
+}
+
+.workingList li .icon {
+  grid-area: icon;
+  width: 6rem;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  color: white;
+  font-size: 2.5rem;
+  border: 0.4rem solid white;
+  border-radius: 50%;
+ 
+  box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+    inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
+    overflow: hidden;
+  
+}
+
+.workingList li::before {
+  content: "";
+  grid-area: line;
+  height: 2rem;
+  color: white;
+  border-right: 2px dotted currentColor;
+ 
+}
+
+.workingList li::after {
+  content: "";
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+background:white;
+  justify-self: center;
+  margin-bottom: 0.5rem;
+ 
+  
+}
+
+.workingList li .title {
+  grid-area: title;
+  margin-block: 0.5rem;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+}
+.workingList .title ,
+.workingList .descr{
+    color: white;
+    
+}
+.workingList .descr{
+    transition: 0.1s linear;
+    animation: wave 4s   infinite ;
+}
+@keyframes wave {
+  0% {transform: translateY(0);}
+  50% {transform: translateY(10px);}
+  100%{transform: translateY(0);
+
+  }
+}
+
+  
+
+.pulse {
+  
+    
+  height: 100px;
+  width: 200px;
+  overflow: hidden;
+  position:relative;
+  transform: translate(-25%,0);
+    mix-blend-mode: color-dodge;
+   
+}
+.pulse:after {
+  content: "";
+  display: block;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200px 100px"><polyline fill="none" stroke-width="3px" stroke="white" points="2.4,58.7 70.8,58.7 76.1,46.2 81.1,58.7 89.9,58.7 93.8,66.5 102.8,22.7 110.6,78.7 115.3,58.7 126.4,58.7 134.4,54.7 142.4,58.7 197.8,58.7 "/></svg>') 0 0 no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-animation: 4s pulse infinite linear;
+          animation: 4s pulse infinite linear;
+}
+.pulse:before {
+  content: "";
+  background: #444;
+
+  position: absolute;
+  z-index: -1;
+  left: 2px;
+  right: 2px;
+  bottom: 0;
+  top: 16px;
+  margin: auto;
+  height: 1px;
+}
+
+@-webkit-keyframes pulse {
+  0% {
+    clip: rect(0, 0, 100px, 0);
+  }
+  10% {
+    clip: rect(0, 66.6666666667px, 100px, 0);
+  }
+  38% {
+    clip: rect(0, 133.3333333333px, 100px, 0);
+  }
+  48% {
+    clip: rect(0, 200px, 100px, 0);
+  }
+  52% {
+    clip: rect(0, 200px, 100px, 0);
+  }
+  62% {
+    clip: rect(0, 200px, 100px, 66.6666666667px);
+  }
+  90% {
+    clip: rect(0, 200px, 100px, 133.3333333333px);
+  }
+  100% {
+    clip: rect(0, 200px, 100px, 200px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    clip: rect(0, 0, 100px, 0);
+  }
+  10% {
+    clip: rect(0, 66.6666666667px, 100px, 0);
+  }
+  38% {
+    clip: rect(0, 133.3333333333px, 100px, 0);
+  }
+  48% {
+    clip: rect(0, 200px, 100px, 0);
+  }
+  52% {
+    clip: rect(0, 200px, 100px, 0);
+  }
+  62% {
+    clip: rect(0, 200px, 100px, 66.6666666667px);
+  }
+  90% {
+    clip: rect(0, 200px, 100px, 133.3333333333px);
+  }
+  100% {
+    clip: rect(0, 200px, 100px, 200px);
+  }
+}
+ 
+ 
+
+ .statusList {
+  padding-left: 50px;
+  mix-blend-mode: color-dodge;
+  list-style-type: none;
+ 
+}
+
+ .statusList li {
+  color: #4F4F4F;
+  padding-left: 16px;
+  margin-top: 24px;
+  position: relative;
+  font-size: 20px;
+  line-height: 20px;
+}
+ .statusList li::before {
+  content: "";
+  display: block;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 2px solid #ddd;
+  position: absolute;
+ top: 0;
+ bottom: 0;
+ margin: auto 0;
+  left: -10%;
+}
+   
+ .statusList p{
+    opacity: 0.8;
+    font-size: 17px;
+    color: white;
+ }
+ .statusList strong {
+  color:white;
+}
+
+ .statusList.alternating-colors li:nth-child(1):before {
+  border-color: #0BAD02;
+}
+ .statusList.alternating-colors li:nth-child(2):before {
+  border-color: #2378D5;
+}
+ .statusList.alternating-colors li:nth-child(3):before {
+  border-color: burlywood;
+}
+ 
 @media screen and (min-width:1000px){
     #list-container{
        
@@ -144,6 +386,31 @@ nav.makeSticky{
      }
     
 }
+.devImg{
+    width: 180px;
+    height: 180px;
+    mix-blend-mode:color-dodge;
+}
+.devRow{
+    background: white;
+    	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+   
+}
+ 
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
  
 
 #about{
@@ -151,7 +418,7 @@ nav.makeSticky{
     background-position: top;
     background-size: cover;
     color:white;
-      transform: translateY(-4px);
+      margin-top: -4px;
     
 }
 #about h6{
@@ -574,6 +841,7 @@ background-color: #212529;
     align-items: center;
 
   }
+  
   #spinner{
     font-size: 1.3rem;
     animation: spinMe 1s   infinite ;
@@ -729,6 +997,16 @@ background-color: #212529;
     .textContainer  span{
         font-size: 8px;
     }
+    .devRow {
+        text-align: center;
+    }
+    .devRow>div ul{
+        padding: 0;
+    }
+     .devRow>div>div{
+        width: 100%;
+        margin: 0.8rem 0;
+     }
      
 }
 
