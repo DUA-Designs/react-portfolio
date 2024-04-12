@@ -333,13 +333,14 @@ const navLinks=()=>setCursorVariant("navLinks");
     
     <nav className="navbar navbar-expand-lg      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
-          <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
+          <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}>   D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           {/* <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  " id="navToggler"></span>
           </button>
           <div className="collapse navbar-collapse  " id="navbarNavDropdown">
             <ul className="navbar-nav col-lg-4 col-md-4 col-sm-6 col-xs-12   justify-content-around " id="list-container">
+              
               <li className="nav-item" >
                 <motion.a className="nav-link active" aria-current="page" href="#about" onMouseEnter={navLinks} onMouseLeave={textLeave} whileTap={{scale:0.8}}  > About </motion.a>
               </li>
@@ -364,17 +365,22 @@ const navLinks=()=>setCursorVariant("navLinks");
           </div>
         </div>
       </nav>
+    
 
-      <section className="container-fluid py-5" id="about">
-        <div className="row d-flex p-3 align-items-center">
+      <section className="container py-5 my-2 position-relative rounded     " id="about">
+
+ 
+                                    
+
+        <div className="row  p-3 align-items-center ">
              
-            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 py-3  rounded hoverStyle" id="aboutMe"> 
-               <h1><span className="fs-6">Hi, I am </span>Uday Aravind.</h1>
+            <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12   py-3 mx-auto  rounded  text-center" id="aboutMe"> 
+               <h1><span className="fs-4">Hi, I am </span>Uday Aravind.</h1>
                 <h3><em>Aspiring Full Stack Developer.</em></h3>
                 <h6>{"I create <"} <span id="textChange"></span><span id="blinkingCursor">&nbsp;</span> {"/>"} </h6>
             </div>
-            <div className="col"></div>
-            <div className="col-lg-4 col-md-4 col-sm-12 col-xs-12 my-2 p-1  rounded hoverStyle">
+            
+            {/* <div className="col-lg-6 col-md-6 col-sm-12 col-xs-12 my-2 p-1  rounded  ">
                <p  >
                 Welcome to my Portfolio!<br></br>
                 Over here I showcase my
@@ -383,10 +389,10 @@ const navLinks=()=>setCursorVariant("navLinks");
                 online portfolio will give an in-depth summary of my
                 skills, work/project history providing a comprehensive
                 view of my qualifications.
-                </p></div>
-                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow-lg text-center mx-auto rounded p-1  position-relative    "   id="quoteContainer">
-                <i className="fa-solid fa-quote-left position-absolute start-0 top-0 m-1"></i>
-                <i className="fa-solid fa-quote-right position-absolute bottom-0 end-0  m-1"></i>
+                </p></div> */}
+                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow  text-center mx-auto rounded p-1  position-relative    "   id="quoteContainer">
+                <i className="fa-solid fa-quote-left position-absolute start-0 top-0 m-2"></i>
+                <i className="fa-solid fa-quote-right position-absolute bottom-0 end-0  m-2"></i>
                   <h3 className="">Quote of the day</h3>
 
                   {quoteCheck===1?<div className="  d-grid align-items-center p-1 text-center"  >  <span id="quote" className="   p-2" >{quote[0]}
