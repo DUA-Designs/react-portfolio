@@ -64,7 +64,7 @@
     height: 100vh;
 }
 nav{
-    background-color:white;
+ 
    
     z-index: 99;
    
@@ -419,7 +419,7 @@ background:white;
  
 
 #about{
-    background:  linear-gradient(  to bottom, rgba(25, 45, 55, 0.8) , rgba(25,50,45,0.8)  ),url(./images/IMG20230618125208.jpg);  
+ 
     background-position: top;
     background-size: cover;
     color:white;
@@ -971,12 +971,15 @@ background-color: #212529;
     }
   }
   #quoteContainer{
-    background-color: rgb(209, 207, 207);
-    color: black;
+    /* background-color: rgb(209, 207, 207); */
+    color: white;
      
     display: grid;
     align-items: center;
 
+  }
+  #quoteContainer i{
+    font-size: 2rem;
   }
   
   #spinner{
@@ -1019,7 +1022,9 @@ background-color: #212529;
   #Submitme{
     background-color: rgb(222, 154, 66);
   }
-
+#aboutMe{
+  mix-blend-mode: color-dodge;
+}
 @media screen and (max-width:768px){
     #aboutMe{
         text-align: center;

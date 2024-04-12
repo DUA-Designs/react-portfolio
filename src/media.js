@@ -17,7 +17,7 @@ import Roxiler3 from './images/roxiler3.png';
 import dev from './images/developer.png';
 import brain from './images/brain (1).png';
 import project from './images/project-management.png';
-import certification from './images/scroll.png';
+import certification from './images/certificate.png';
 
 
 export {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs,Roxiler,Roxiler1,Roxiler2,Roxiler3,shorts,dev,brain,project,certification};
