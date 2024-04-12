@@ -1,7 +1,7 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev} from './media';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev, maze, brain, project, certification} from './media';
 import axios from 'axios';
  
 
@@ -334,7 +334,7 @@ const navLinks=()=>setCursorVariant("navLinks");
     <nav className="navbar navbar-expand-lg      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}><img src={DD} className="col-lg-5 col-md-5 col-sm-8 " id="logo" alt="D_D"></img>  D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
-          <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button>
+          {/* <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  " id="navToggler"></span>
           </button>
@@ -446,12 +446,24 @@ const navLinks=()=>setCursorVariant("navLinks");
 
     
 
-      <section id="skills" className="py-5">
+      <section id="skills" className="py-5 ">
         <div className="container ">
-          <h1 className="p-4 shadow  w-75  border rounded position-relative mx-auto  mb-5 " id="mySkills" ><span className="  position-absolute translate-middle top-0 start-50  shadow  bg-body-tertiary border rounded-circle text-danger" id="Icon" onMouseEnter={techStack} onMouseLeave={textLeave}><i className="fa-solid fa-brain"></i></span>Tech Stack</h1>
-          <div className="row py-4  ">
+          {/* <h1 className="     rounded position-relative mx-auto    " id="mySkills" ><span className="  position-absolute translate-middle top-0 start-50           text-danger" id="Icon" onMouseEnter={techStack} onMouseLeave={textLeave}><i className="fa-solid fa-brain"></i> <div class="brainContainer"></div></span>Tech Stack</h1> */}
+          
+          <div>
+               <ul className="workingList  balloons">
+                                  <li  >
+                                    <div class="icon"><img src={brain} alt="brainImage" className="img-fluid brainImg balloonImg"></img> </div>
+                                    <div class="title">Tech Stack</div>
+                                   
+                                  </li>
+                                  
+               </ul>
+                                <div className="dots"></div>
+          </div>
+          <div className="row     ">
            {/*skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)*/}
-             <div className=" col-12  text-start   bg-light rounded" id="categories">
+             <div className=" col-12  text-start      rounded" id="categories">
               <ul className="row     ">
               
               
@@ -468,7 +480,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                   
               </ul>
               <div className="confidence">
-                <div className="textContainer bg-light   rounded p-2">
+                <div className="textContainer    rounded p-2">
                   <span>L</span><span>e</span><span>v</span><span>e</span><span>l</span><span>&nbsp;</span>
                   <span>O</span><span>f</span><span>&nbsp;</span>
                   <span>C</span><span>o</span><span>n</span><span>f</span><span>i</span><span>d</span><span>e</span><span>n</span><span>c</span><span>e</span>
@@ -481,28 +493,41 @@ const navLinks=()=>setCursorVariant("navLinks");
           </div>
         </div>
       </section>
-      <section id="projects" className="p-1   ">
-        <h1 className="p-4 my-5 w-75 mx-auto       shadow-lg border  rounded position-relative" id="honed">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <p style={{color:`${bright?"white":"black"}`}}>Sorted from latest</p>
-      <div className="p-2  text-center   rounded"  >
+
+      <section id="projects" className="p-1 container   ">
+        {/* <h1 className="p-4 my-5 w-75 mx-auto       shadow-lg border  rounded position-relative" id="honed">Projects that honed my skills<i className="fas fa-project-diagram position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1> */}
+         <div>
+               <ul className="workingList balloons ">
+                                  <li  >
+                                    <div class="icon "><img src={project} alt="balloonImg" className="img-fluid  balloonImg"></img> </div>
+                                    <div class="title">Projects</div>
+                                   
+                                  </li>
+                                  
+               </ul>
+                                <div className="dots"></div>
+          </div>
+        
+      <div className="   text-center   rounded  projectList"  >
+      <p style={{color:"white"}} className="p-3">Sorted from latest</p>
 
        
         
       
-        <div className="row p-2 "  >
+        <div className="row  "  >
         {projects.map((item,index)=> item.desc? 
-                                  <div className="col-12 border rounded   p-lg-4 p-md-2 p-sm-1 p-xs-0 shadow bg-body-tertiary  d-flex flex-wrap  my-2 p-1" key={index}>
+                                  <div className="col-12   rounded   p-lg-4 p-md-2 p-sm-1 p-xs-0     d-flex flex-wrap  my-2 p-1" key={index}>
                                     <div className="col-lg-7 col-md-8 col-sm-12 col-xs-12 p-2  ">
-                                      {item.video?<video autoPlay    muted loop  className="col-12 border rounded "  ><source src={item.video}></source></video>:
+                                      {item.video?<video autoPlay    muted loop  className="col-12   rounded "  ><source src={item.video}></source></video>:
                                              <div id="carouselExampleSlidesOnly" className="carousel slide  " data-bs-ride="carousel">
                                              <div className="carousel-inner">
                                                <div className="carousel-item active">
-                                                 <img src={item.carousel[0]} className="d-block w-100 border rounded" alt="..."/>
+                                                 <img src={item.carousel[0]} className="d-block w-100   rounded" alt="..."/>
                                                </div>
                                                {item.carousel.map((carouselItem,caroIndex)=>{
                                                 if(caroIndex>0){
                                                   return (<div className="carousel-item"  key={caroIndex}>
-                                                 <img src={carouselItem} className="d-block w-100 border rounded" alt="..."/>
+                                                 <img src={carouselItem} className="d-block w-100   rounded" alt="..."/>
                                                </div>);
                                                }
                                                else{
@@ -517,13 +542,13 @@ const navLinks=()=>setCursorVariant("navLinks");
                                     </div>
                                   <div className="col-lg-5 col-md-4 col-sm-12 col-xs-12 p-lg-4 p-md-2 p-sm-1 p-xs-0 my-2" id="projectDescription">
                                     <h4 className=" ">{item.name}({item.completion}) {item.icon}</h4><p className="col-12 p-lg-4 p-md-2 p-sm-1 p-xs-0 ">{item.desc}</p>
-                                    {item.linkedIn?<div className="p-1 m-1"><a className="btn btn-dark" href={item.linkedIn}>Working Detail <i className="fa-solid fa-circle-info"></i></a></div>:""}
-                                    <div className="d-flex justify-content-around col-12 "><a href={item.git} className="btn btn-dark col-5">Code <i className="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark col-5">Live Demo <i className="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
+                                    {item.linkedIn?<div className="p-1 m-1"><a className="btn btn-dark  blendMode" href={item.linkedIn}>Working Detail <i className="fa-solid fa-circle-info"></i></a></div>:""}
+                                    <div className="d-flex justify-content-around col-12 "><a href={item.git} className="btn btn-dark col-5  blendMode">Code <i className="fa-brands fa-github"></i></a><a href={item.demo} className="btn btn-dark col-5 blendMode">Live Demo <i className="fa-solid fa-arrow-up-right-from-square"></i></a></div></div>
                                   </div>:
 
 
                                   <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box" key={index}>
-                                    <div className="shadow border border rounded p-2 bg-white"> 
+                                    <div className="      rounded p-2  "> 
                                    <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
                                     <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
                                        <p  id="caption">{item.name}</p>
@@ -541,24 +566,35 @@ const navLinks=()=>setCursorVariant("navLinks");
       </div>
     </section>
     <section  id="certifications" className="py-5">
-        <h1 className="p-4  w-75 mx-auto   shadow border rounded position-relative" id="myCerti">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1>
-        <div id="carouselExampleRide" className="carousel slide    " data-bs-ride="true">
+        {/* <h1 className="p-4  w-75 mx-auto   shadow border rounded position-relative" id="myCerti">My Certifications <i className="fa fa-certificate position-absolute top-0 translate-middle start-50 z-1  text-danger shadow" id="Icon"></i></h1> */}
+        <div>
+               <ul className="workingList balloons ">
+                                  <li  >
+                                    <div class="icon "><img src={certification} alt="balloonImg" className="img-fluid  balloonImg"></img> </div>
+                                    <div class="title">Certifications</div>
+                                   
+                                  </li>
+                                  
+               </ul>
+                                <div className="dots"></div>
+          </div>
+        <div id="carouselExampleRide" className="carousel slide border rounded  container py-2 " data-bs-ride="true">
             
-            <div className="carousel-inner p-2  ">
-              <div className="carousel-item active col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+            <div className="carousel-inner    ">
+              <div className="carousel-item active col-lg-10 col-md-10 col-sm-12 col-xs-12  ">
                 <img src={infotrixs} className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item  col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+              <div className="carousel-item  col-lg-10 col-md-10 col-sm-12 col-xs-12  ">
                 <img src="https://dua-designs.github.io/portfolio/images/certi.png" className= "img-fluid rounded" alt="certifaction_Image"/>
               </div>
               
-              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 ">
                 <img src="https://dua-designs.github.io/portfolio/images/javascript_certi.PNG" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12  ">
                 <img src="	https://dua-designs.github.io/portfolio/images/Fedl.PNG" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
-              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12 p-2">
+              <div className="carousel-item col-lg-10 col-md-10 col-sm-12 col-xs-12  ">
                 <img src="https://dua-designs.github.io/myportfolio/images/30daysReact.png" className=" img-fluid rounded" alt="certifaction_Image"/>
               </div>
             </div>

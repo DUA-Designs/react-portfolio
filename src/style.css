@@ -156,6 +156,7 @@ nav.makeSticky{
   justify-content: center;
   gap: 2rem;
   list-style: none;
+  padding: 0;
  
 }
 
@@ -480,19 +481,41 @@ background:white;
 }
 #skills{
     text-align: center;
-  
    
   
-    color: black;
+   
+
+    
 }
+ .balloons.workingList .icon{
+      width: 130px;
+      height: 130px;
+      padding: 20px;
+    }
+    .balloons .title{
+      animation: wave 4s   infinite ;
+
+    }
+
+        
+  .balloonImg{
+    mix-blend-mode: color-dodge;
+ 
+  }
+     
 #skills.darkMode{
     background-color: #32383e;
     color: white;
 }
 #categories{
-  border-bottom: 8px solid rgb(222, 154, 66);
+  border: 1px solid rgb(222, 154, 66) ;
+  border-bottom: 8px solid rgb(222, 154, 66) ;
   transition: 0.3s linear;
   position: relative;
+  color: white;
+  mix-blend-mode: color-dodge;
+ 
+ 
 }
 #categories.darkMode{
     color: black;
@@ -508,6 +531,7 @@ background:white;
 font-size: 20px;
 font-weight: 700;
 text-wrap: nowrap;
+mix-blend-mode: color-dodge;
 }
 #categories .subList{
     font-size: 30px;
@@ -517,6 +541,7 @@ text-wrap: nowrap;
  font-size: 35px;
  color: rgb(222, 154, 66);
 }
+ 
 .confidence{
     position: absolute;
     height: 100%;
@@ -529,6 +554,8 @@ text-wrap: nowrap;
      
 
     padding: 0.8rem;
+    
+   
      
     
 }
@@ -538,18 +565,21 @@ text-wrap: nowrap;
     justify-content: space-around;
     text-align: center;
     height: 70%;
-    z-index: 1;
+   
+ 
+ 
      
   
 }
 .lineHighlighter{
     width: 1px;
     height: 100%;
-    background-color: black;
+  
     position: absolute;
     left: 0;
     right: 0;
     margin: auto;
+    
     
 
     
@@ -580,9 +610,9 @@ background-color: rgb(222, 154, 66);
  
 #projects{
     text-align: center;
+   
   
-  
-  
+
     color: black;
 }
 #projects.darkMode{
@@ -590,6 +620,17 @@ background-color: rgb(222, 154, 66);
     background-color: #32383e;
 
 }
+.projectList{
+    border: 1px solid rgba(255, 255, 255, 0.511) ;
+  border-bottom: 8px solid rgba(255, 255, 255, 0.511);
+ 
+  color: white;
+}
+.blendMode{
+   mix-blend-mode: color-dodge;
+
+}
+ 
 #honed{
     background-color: white;
 }
@@ -600,10 +641,11 @@ background-color: rgb(222, 154, 66);
  
  
  
+ 
 #box a{
     display: block;
     text-decoration: none;
-    color: black;
+    color: white;
 }
 #box p{
     padding:5px;
@@ -658,21 +700,112 @@ height: 20%;
     height: 600px;
 }
  #Icon{
-    width: 50px;
-    height: 50px;
+ 
     border-radius: 50%;
-    background-color: white;
+ 
     display: grid;
     align-items: center;
     font-size: 1.5rem;
     text-align: center;
+       border: 4px solid white;
+         box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.45),
+    inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45) ;
     
 }
-#mySkills{
-    background-color: white;
+ #Icon i{
+      font-size: 2.5rem;
+      
+     
+    }
+
+    .brainContainer{
+    width:50vw;
+    height:50vw;
+    max-height:400px;
+    max-width:400px;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    overflow:hidden;
+    cursor:pointer;
+    z-index:-1;
 }
+svg{
+    height:100%;
+    width:100%;
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+}
+path{
+	fill:transparent;
+}
+.brainPath{
+	stroke:#00ff00;
+	stroke-width:1;
+}
+.brainCircle{
+	stroke:#00FF00;
+	fill:#00FF00;
+}
+.brainRect{
+	stroke:#00FF00;
+	fill:#00FF00;
+}
+.brainEllipse{
+	stroke:#00FF00;
+	fill:#00FF00;
+}
+.animatePaths{
+  animation: goPath 3000ms alternate infinite;
+}
+.animateCircles{
+  animation: goCircle 3000ms alternate infinite;
+}
+.animateRects{
+  animation: goRect 3000ms alternate infinite;
+}
+@keyframes goPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+@keyframes goRect {
+  to {
+    opacity:0;
+  }
+}
+@keyframes goCircle {
+  0% {
+		opacity:0;
+  }
+  50% {
+		opacity:1;
+  }
+  100% {
+		opacity:0;
+  }
+}
+ 
+#mySkills{
+  color: white;
+  padding: 50px 0 20px 0;
+     mix-blend-mode: color-dodge;
+ 
+ 
+}
+
 #mySkills.darkMode{
     background-color: #32383e;
+}
+.dots{
+  width: 1px;
+  height: 50px;
+  border-left:2px dotted white;
+ 
+  margin: 0 auto;
 }
 #product{
     color:white;
@@ -954,6 +1087,7 @@ background-color: #212529;
     #skills-icons{
         font-size: 1rem;
     }
+   
     #track{
  
         height:10px;
@@ -969,10 +1103,14 @@ background-color: #212529;
         height: 200px;
     }
     #Icon{
-        width: 30px;
-        height: 30px;
+        width: 50px;
+        height: 50px;
         font-size: 0.8rem;
+        
+          
+     
     }
+    
     #author{
         font-size: 10px;
      }
