@@ -389,7 +389,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                 <i className="fa-solid fa-quote-right position-absolute bottom-0 end-0  m-1"></i>
                   <h3 className="">Quote of the day</h3>
 
-                  {quoteCheck===1?<div className="  d-grid align-items-center p-1 text-end"  >  <span id="quote" className="   p-2" >{quote[0]}
+                  {quoteCheck===1?<div className="  d-grid align-items-center p-1 text-center"  >  <span id="quote" className="   p-2" >{quote[0]}
                   <br/><span className="  mt-1 mb-3  " id="author" >{quote[1]}</span>
                   </span>  
                   </div>:
