@@ -118,11 +118,9 @@ nav.makeSticky{
   
 }
 .navbar-brand{
-  color: white;
+  color: white !important;
 }
-.navbar-brand:hover{
-  color: white;
-}
+ 
 
  
  
@@ -238,6 +236,7 @@ background:white;
 .workingList .title ,
 .workingList .descr{
     color: white;
+    position: relative;
     
 }
 .workingList .descr{
@@ -482,7 +481,7 @@ background:white;
     content: "";
      animation: dynamicText 24s   2s infinite  ;
    
-    color: rgb(222, 154, 66);
+    color: rgb(66, 222, 110);
 
 }
 #blinkingCursor{
@@ -539,9 +538,26 @@ background:white;
       padding: 20px;
     }
     .balloons .title{
-      animation: wave 4s   infinite ;
+     
+         transform: translateY(-10px);
+         animation: titleWave 4s infinite;
 
     }
+
+  @keyframes titleWave {
+    0%{
+
+         transform: translateY(-10px);
+    }
+    50%{
+      transform: translateY(10px);
+    }
+    100%{
+       transform: translateY(-10px);
+    }
+        
+    
+  }
 
         
   .balloonImg{
@@ -667,10 +683,14 @@ background-color: rgb(222, 154, 66);
 
 }
 .projectList{
-    border: 1px solid rgba(255, 255, 255, 0.511) ;
+    border-top: 1px solid rgba(255, 255, 255, 0.511) ;
+     
   border-bottom: 8px solid rgba(255, 255, 255, 0.511);
  
   color: white;
+}
+.projectList img{
+  height: 340px;
 }
 .blendMode{
    mix-blend-mode: color-dodge;
@@ -696,6 +716,7 @@ background-color: rgb(222, 154, 66);
 #box p{
     padding:5px;
 }
+ 
 #box #tech a{
     color: white;
 }
@@ -725,6 +746,7 @@ height: 20%;
         filter: brightness(25%);
    
 }
+
 #certifications{
      
    
@@ -850,23 +872,79 @@ path{
   width: 1px;
   height: 50px;
   border-left:2px dotted white;
- 
+ position: relative;
   margin: 0 auto;
 }
+.dots::before{
+  position: absolute;
+ transform: translate(-55%,-50%);
+    content: "";
+  grid-area: dot;
+  width: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+background:white;
+  justify-self: center;
+  margin-bottom: 0.5rem;
+ 
+}
+ 
+ /* .playerContainer{
+ 
+   width: 100px;
+   height: 100px;
+   overflow: hidden;
+ 
+   margin: 0 auto;
+ 
+  
+   mix-blend-mode: color-dodge;
+ 
+ }
+ .lines{
+  width: 100px;
+  height: 100px;
+  position: relative;
+  scale: 4;
+ 
+ 
+ }
+  .lines svg{
+ position: absolute;
+ left: 0 ;
+ top: 0;
+
+ }   
+  */
+
+
 #product{
     color:white;
+     
+    height: 500px;
+     mix-blend-mode: color-dodge;
+   
 }
-#disappear{
-    position: absolute;
-    top: 25%;
+ 
+ #disappear{
+  z-index: 3;
+     transition: all 0.3s ease;
     
-    left: 25%;
+ }
+#disappear h1{
+     font-size: 70px;
     
  
 }
 #disappear.activate{
     transform: scale(0);
-    transition: all 0.3s ease;
+      z-index: -3  ;
+  
+  
+     
+        
+       
+    
 }
  
 
@@ -882,23 +960,37 @@ path{
     border-bottom: 3px solid  rgb(222, 154, 66);
 }
 #git{
-   
- 
-  transform: scale(0);
+   width: 100%;
+ z-index: -3;
+  transform: scale(0) !important;
   transition: all 0.3s ease;
  
 }
+#git input,#git textarea{
+  color: white;
+  background: transparent;
+  
+}
+#git.makeVisible{
+   z-index: 3;
+transform: scale(1) !important;
+}
 #touchbtn{
-    background-color:rgb(222, 154, 66) ;
+    background-color: #212529 ;
+    color: white;
 }
 #footLinks{
     color:white;
 }
+.myLinks{
+  mix-blend-mode: color-dodge;
+}
 #designBy{
-    border-bottom: 1px solid rgb(222, 154, 66);
+    border-bottom: 1px solid white;
+    color: rgb(222, 154, 66) ;
 }
 #designBy span{
-    color:rgb(222, 154, 66) ;
+    color:white
 }
 #footLinks i{
     font-size:1rem;
@@ -914,9 +1006,9 @@ background-color: #212529;
 
 
 }
-#footLinks i:hover{
-    background-color :  rgb(222, 154, 66);
-}
+  #academy{
+          mix-blend-mode: color-dodge;
+    }
 #footLinks a{
     text-decoration: none;
 }
@@ -926,6 +1018,12 @@ background-color: #212529;
  bottom: 20px;
  right: 20px;
  display: none;
+    mix-blend-mode: color-dodge;
+    animation:wave 4s infinite;
+}  
+#btn-back-to-top i{  
+  font-size: 1rem;
+          
 }
 
 .hoverStyle:hover{
@@ -1046,6 +1144,7 @@ background-color: #212529;
     
     position: absolute;
     top: 0;
+    left: 0;
     opacity: 0;
     text-align: center;
     background-color:  rgb(222, 154, 66);
@@ -1055,6 +1154,7 @@ background-color: #212529;
     z-index: -1;
     height: 100%;
     width: 100%;
+    color: black;
 
      
    
@@ -1067,7 +1167,11 @@ background-color: #212529;
     transition: 0.3s linear;
   }
   #Submitme{
-    background-color: rgb(222, 154, 66);
+    
+  color: white;
+  background-color: #212529;
+ 
+    
   }
 #aboutMe{
   mix-blend-mode: color-dodge;
@@ -1087,6 +1191,14 @@ background-color: #212529;
 }
 #aboutMe h6{
   margin-top: 70px;
+}
+@media screen and (min-width:769px) {
+
+  .projectList {
+    border-left: 1px solid rgba(255, 255, 255, 0.325) ;
+      border-right: 1px solid rgba(255, 255, 255, 0.325)  ;
+  }
+  
 }
 @media screen and (max-width:768px){
     #aboutMe{
@@ -1122,6 +1234,7 @@ background-color: #212529;
     #academy{
         font-size: 15px;
         text-align: center;
+     
     }
     #academy p{
         margin: 0 auto;
@@ -1131,15 +1244,19 @@ background-color: #212529;
         width: 35px;
     height: 35px;
     }
+    
     #btn-back-to-top{
         bottom: 20px;
         right:20px;
+     
+         
         
 
 
     }
     #btn-back-to-top i{
         font-size: 1rem;
+      
     }
     #Submitme{
         width: 70% !important;
@@ -1182,11 +1299,7 @@ background-color: #212529;
     #author{
         font-size: 10px;
      }
-     #disappear{
-        
-        
-        left: 5%;
-    }
+     
     #projectDescription  {
         font-size: 12px;
     }

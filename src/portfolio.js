@@ -1,15 +1,24 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev, maze, brain, project, certification} from './media';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev, maze, brain, project, certification, lines, waveBeam, thickLines} from './media';
 import axios from 'axios';
  
-
-
-import { motion, useMotionValue } from "framer-motion"
  
  
-
+ import { Player, Controls } from '@lottiefiles/react-lottie-player';
+import Lottie from 'react-lottie';
+import { motion,  useMotionValue } from "framer-motion"
+ 
+ 
+ const defaultOptions = {
+      loop: true,
+      autoplay: true,
+      animationData: lines,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice"
+      }
+    };
 
  const projects=[
   {icon:<i className="fa-solid fa-play"></i>,git:"https://github.com/DUA-Designs/HelloAR",demo:"https://dua-designs.github.io/HelloAR/",completion:"February 2024",name:"Shorts App",desc:"Shorts App allows you to add videos that are oriented vertically and also scroll through the available ones. The working is similar to youtube shorts. This project is made with React App and it is a coding challenge given to me by HelloAR.",video:shorts},
@@ -242,16 +251,14 @@ useEffect(()=>{
           function detailsInput(){
             document.getElementById("disappear").classList.add("activate");
 
-            setTimeout(()=>{
-              document.getElementById("disappear").style.display="none";
-             },500);
+           
            
 
  
           
            
            setTimeout(()=>{
-            document.getElementById("git").style.transform="scale(1)";
+            document.getElementById("git").classList.add("makeVisible"); 
            },700);
           }
           function handleBrightness(){
@@ -333,7 +340,7 @@ const navLinks=()=>setCursorVariant("navLinks");
     
     <nav className="navbar navbar-expand-lg      "id="mrNav">
         <div className="container-fluid d-flex  position-relative  " id="navContainer">
-          <a className="navbar-brand col-1" href="#dua"  onMouseEnter={textEnter} onMouseLeave={textLeave}>   D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
+          <a className="navbar-brand col-1" href="https://dua-designs.github.io/react-portfolio/"  onMouseEnter={textEnter} onMouseLeave={textLeave}>   D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           {/* <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon  " id="navToggler"></span>
@@ -390,7 +397,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                 skills, work/project history providing a comprehensive
                 view of my qualifications.
                 </p></div> */}
-                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10 shadow  text-center mx-auto rounded p-1  position-relative    "   id="quoteContainer">
+                <div className="col-lg-8 col-md-10 col-xm-10 col-xs-10    text-center mx-auto rounded p-1  position-relative    "   id="quoteContainer">
                 <i className="fa-solid fa-quote-left position-absolute start-0 top-0 m-2"></i>
                 <i className="fa-solid fa-quote-right position-absolute bottom-0 end-0  m-2"></i>
                   <h3 className="">Quote of the day</h3>
@@ -411,7 +418,7 @@ const navLinks=()=>setCursorVariant("navLinks");
 
                   
             
-             <div className="row       shadow rounded py-4   ">
+             <div className="row         rounded py-4   ">
           
                <div className="  mx-auto  d-flex flex-wrap justify-content-around align-items-center">
                <div  className="   ">
@@ -460,11 +467,22 @@ const navLinks=()=>setCursorVariant("navLinks");
                <ul className="workingList  balloons">
                                   <li  >
                                     <div class="icon"><img src={brain} alt="brainImage" className="img-fluid brainImg balloonImg"></img> </div>
-                                    <div class="title">Tech Stack</div>
+                                       
+                                    
+                                    <div class="title">Tech Stack   </div>
+                                     
                                    
                                   </li>
                                   
-               </ul>
+               </ul>       
+               
+          {/* <div className="playerContainer">
+                                         <Player
+                                         autoplay
+                                         loop
+                                         
+                                         src={thickLines} className="lines"/></div> */}
+                                
                                 <div className="dots"></div>
           </div>
           <div className="row     ">
@@ -556,7 +574,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                                   <div className="col-lg-4 col-md-6 col-sm-6 col-xs-10 my-2 position-relative " id="box" key={index}>
                                     <div className="      rounded p-2  "> 
                                    <div id="tech"  className="position-absolute"><a   href={item.link}>{item.tech}</a></div> 
-                                    <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid"/>
+                                    <a href={item.link}> <img  src={item.img}  alt="project_Image"  className="img-fluid rounded"/>
                                        <p  id="caption">{item.name}</p>
                                       </a> 
                                       </div>
@@ -616,14 +634,14 @@ const navLinks=()=>setCursorVariant("navLinks");
          
     </section>
     <footer >
-        <section id="product" className="bg-dark py-5">
+        <section id="product" className="  py-5">
             <div className="container  position-relative" >
                
-            <div className="row p-3 postiton-absolute"   >
+            <div className="row p-3 position-absolute  " id="git"  >
                
                 
-            <div className="col-10 mx-auto p-2 py-4"   id="git" >
-              <form method="post"  onSubmit={(event)=>sendEmail(event)}  className="position-relative" id="contactForm" >
+            <div className="col-10 mx-auto p-2 py-4"     >
+              <form method="post"  onSubmit={(event)=>sendEmail(event)}    id="contactForm" >
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
@@ -651,7 +669,8 @@ const navLinks=()=>setCursorVariant("navLinks");
               </form>
           </div>
         </div>
-        <div className="row"   id="disappear">
+
+        <div className="row  "   id="disappear">
                     <div className="col-6 mx-auto text-center"  >
                         <h1><span  >UDAY</span><br/>
                         <span id="line"> ARAVIND</span></h1>
@@ -668,7 +687,7 @@ const navLinks=()=>setCursorVariant("navLinks");
 
 
         </section>
-        <section className="bg-black py-4" id="footLinks">
+        <section className="  py-4" id="footLinks">
             <div className="container">
                <div className="row">
             <div className="col-lg-6 col-md-6 col-sm-6 col-xs-12  my-3  " id="academy">
@@ -678,7 +697,7 @@ const navLinks=()=>setCursorVariant("navLinks");
             <div className="col ">
              
             </div>
-            <div className="  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 my-3">
+            <div className="myLinks  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 my-3">
               <a href="#twitter" target="blank"><i className="fa-brands fa-twitter  rounded"></i></a>
               <a href="https://www.facebook.com/dualifts/" target="blank"><i className="fa-brands fa-facebook-f   rounded"></i></a>
               <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a>
@@ -696,7 +715,7 @@ const navLinks=()=>setCursorVariant("navLinks");
     className="btn   btn-floating z-2"
     id="btn-back-to-top"
     >
-<i className="fas fa-arrow-up"></i>
+<i class="fi fi-br-angle-up"></i>
 </button>
     </div>)
 }
