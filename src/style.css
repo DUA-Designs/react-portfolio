@@ -24,6 +24,7 @@
     height: 100vh;
     width: 100vw;
     overflow-x: hidden;
+    transition: all 0.2s linear;
     /* background-color: rgb(229, 224, 224); */
  
  }
@@ -416,6 +417,17 @@ background:white;
    
 }
  
+.darkGradient{
+      background: white;
+    	/* background: linear-gradient(-45deg,#240b36, #0F2027, #203A43, #2C5364); */
+       /* background: linear-gradient(-45deg,  #203A43,#2C5364,  #3a6186,#89253e); */
+       background: linear-gradient(-45deg, #6c3525, #782040, #166582, #137861);
+     
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+   
+}
+ 
 
 @keyframes gradient {
 	0% {
@@ -457,15 +469,15 @@ background:white;
  
   width: 100%;
  height: 100%;
+ z-index: -1;
  
- 
-  mix-blend-mode:soft-light;
+ mix-blend-mode: soft-light;
   
  background-size:cover;
  
  
  
-  background-image: url( ./images/blob-scene-haikei.svg);
+  background-image: url( ./images/wave-haikei.svg);
   background-repeat: no-repeat;
   z-index: 0;
 }
@@ -1184,7 +1196,7 @@ background-color: #212529;
     
   }
 #aboutMe{
-  mix-blend-mode: color-dodge;
+  
   margin-bottom: 120px;
   
  
@@ -1205,6 +1217,18 @@ background-color: #212529;
  .navbar-toggler{
         filter: invert(1);
       }
+
+.lightSaber{
+ mix-blend-mode:color-dodge;
+ 
+  height: 500px;
+}
+.guideToLight{
+  height:500px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
 @media screen and (min-width:769px) {
 
   .projectList {

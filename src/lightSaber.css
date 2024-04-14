@@ -1,6 +1,12 @@
  
 
+* {
+  -webkit-tap-highlight-color: transparent; }
+
+ 
+
 .tooltip {
+ 
   z-index: 1000;
   display: inline-block;
   position: absolute;
@@ -53,7 +59,10 @@
   bottom: 100px;
   width: 500px;
   height: 455px;
-  left: -200px; }
+  left: -200px;
+  
+ 
+  }
   @media (min-width: 375px) {
     .mask {
       left: -100px; } }
@@ -506,7 +515,7 @@
     box-shadow: 0 0 5px rgba(243, 206, 121, 0.5), 0 0 5px rgba(243, 206, 121, 0.5), 0 7px 20px rgba(255, 0, 0, 0.6), 0 -7px 20px rgba(255, 0, 0, 0.6), 20px 7px 20px rgba(255, 0, 0, 0.4), 20px -7px 20px rgba(255, 0, 0, 0.4); } }
 
 @-webkit-keyframes spark-up {
-  0 {
+  0% {
     opacity: 0; }
   75% {
     opacity: 0; }
@@ -520,7 +529,7 @@
     opacity: 0; } }
 
 @keyframes spark-up {
-  0 {
+  0% {
     opacity: 0; }
   75% {
     opacity: 0; }
@@ -534,7 +543,7 @@
     opacity: 0; } }
 
 @-webkit-keyframes spark-down {
-  0 {
+  0% {
     opacity: 0; }
   75% {
     opacity: 0; }
@@ -548,7 +557,7 @@
     opacity: 0; } }
 
 @keyframes spark-down {
-  0 {
+  0% {
     opacity: 0; }
   75% {
     opacity: 0; }
@@ -562,7 +571,7 @@
     opacity: 0; } }
 
 @-webkit-keyframes ripple {
-  0 {
+  0% {
     opacity: 1;
     border-radius: 1px;
     -webkit-transform: translate(0, -1px) rotate(0deg);
@@ -574,7 +583,7 @@
     transform: translate(0, 1px) rotate(0deg); } }
 
 @keyframes ripple {
-  0 {
+  0% {
     opacity: 1;
     border-radius: 1px;
     -webkit-transform: translate(0, -1px) rotate(0deg);
@@ -586,7 +595,7 @@
     transform: translate(0, 1px) rotate(0deg); } }
 
 @-webkit-keyframes lineMove {
-  0 {
+  0% {
     -webkit-transform: translate(0, -1px);
     transform: translate(0, -1px); }
   100% {
@@ -594,7 +603,7 @@
     transform: translate(20px, 1px); } }
 
 @keyframes lineMove {
-  0 {
+  0% {
     -webkit-transform: translate(0, -1px);
     transform: translate(0, -1px); }
   100% {
