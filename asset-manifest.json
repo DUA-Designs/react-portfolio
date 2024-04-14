@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.27b8834a.css",
+    "main.css": "/react-portfolio/static/css/main.2f1b64cf.css",
     "main.js": "/react-portfolio/static/js/main.0f281447.js",
     "static/media/Shorts.mp4": "/react-portfolio/static/media/Shorts.b4bc6892577b27797ac8.mp4",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
@@ -24,11 +24,11 @@
     "static/media/project-management.png": "/react-portfolio/static/media/project-management.10b312ee9602c2febbbf.png",
     "index.html": "/react-portfolio/index.html",
     "static/media/wave-haikei.svg": "/react-portfolio/static/media/wave-haikei.1ae4719c69b65dda483e.svg",
-    "main.27b8834a.css.map": "/react-portfolio/static/css/main.27b8834a.css.map",
+    "main.2f1b64cf.css.map": "/react-portfolio/static/css/main.2f1b64cf.css.map",
     "main.0f281447.js.map": "/react-portfolio/static/js/main.0f281447.js.map"
   },
   "entrypoints": [
-    "static/css/main.27b8834a.css",
+    "static/css/main.2f1b64cf.css",
     "static/js/main.0f281447.js"
   ]
 }
