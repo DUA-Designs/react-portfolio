@@ -90,11 +90,11 @@ export function Main(){
           }
           
           if (
-               myApp.scrollTop> 20  
+               myApp.scrollTop> 50  
           ) {
-            mybutton.style.display = "block";
+            mybutton.classList.add("makeVisible");
           } else {
-            mybutton.style.display = "none";
+            mybutton.classList.remove("makeVisible");
           }
 
           if(myApp.scrollTop>document.getElementById("about").offsetHeight*(0.7) ){
@@ -672,7 +672,7 @@ const navLinks=()=>setCursorVariant("navLinks");
         </div>
 
         <div className="row  "   id="disappear">
-                    <div className="col-6 mx-auto text-center"  >
+                    <div className="col-lg-6 mx-auto text-center"  >
                         <h1><span  >UDAY</span><br/>
                         <span id="line"> ARAVIND</span></h1>
                        
