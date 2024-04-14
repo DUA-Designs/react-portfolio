@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.d4c4348b.css",
-    "main.js": "/react-portfolio/static/js/main.10357531.js",
+    "main.css": "/react-portfolio/static/css/main.8a9f6867.css",
+    "main.js": "/react-portfolio/static/js/main.f1578e17.js",
     "static/media/Shorts.mp4": "/react-portfolio/static/media/Shorts.b4bc6892577b27797ac8.mp4",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/react-portfolio/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
@@ -23,11 +23,11 @@
     "static/media/project-management.png": "/react-portfolio/static/media/project-management.10b312ee9602c2febbbf.png",
     "index.html": "/react-portfolio/index.html",
     "static/media/blob-scene-haikei.svg": "/react-portfolio/static/media/blob-scene-haikei.dccc9d737d224ec94ab6.svg",
-    "main.d4c4348b.css.map": "/react-portfolio/static/css/main.d4c4348b.css.map",
-    "main.10357531.js.map": "/react-portfolio/static/js/main.10357531.js.map"
+    "main.8a9f6867.css.map": "/react-portfolio/static/css/main.8a9f6867.css.map",
+    "main.f1578e17.js.map": "/react-portfolio/static/js/main.f1578e17.js.map"
   },
   "entrypoints": [
-    "static/css/main.d4c4348b.css",
-    "static/js/main.10357531.js"
+    "static/css/main.8a9f6867.css",
+    "static/js/main.f1578e17.js"
   ]
 }
