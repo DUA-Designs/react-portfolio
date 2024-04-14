@@ -712,7 +712,7 @@ const navLinks=()=>setCursorVariant("navLinks");
     </footer>
     <button
     type="button"
-    className="btn   btn-floating z-2"
+    className="btn   btn-floating  "
     id="btn-back-to-top"
     >
 <i class="fi fi-br-angle-up"></i>

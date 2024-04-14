@@ -1192,6 +1192,9 @@ background-color: #212529;
 #aboutMe h6{
   margin-top: 70px;
 }
+ .navbar-toggler{
+        filter: invert(1);
+      }
 @media screen and (min-width:769px) {
 
   .projectList {
@@ -1248,6 +1251,7 @@ background-color: #212529;
     #btn-back-to-top{
         bottom: 20px;
         right:20px;
+        
      
          
         
@@ -1333,6 +1337,10 @@ background-color: #212529;
       .statusList li::before {
         left: -4%;
       }
+      .projectList img{
+  height: 250px;
+}
+      
      
 }
 
