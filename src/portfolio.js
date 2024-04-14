@@ -1,7 +1,7 @@
 import React from "react";
 import {  useEffect,useState } from "react";
 import emailjs from '@emailjs/browser';
-import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev, maze, brain, project, certification, lines, waveBeam, thickLines, energy} from './media';
+import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs, Roxiler, Roxiler1, Roxiler2, Roxiler3,shorts, dev, maze, brain, project, certification, lines, waveBeam, thickLines, energy, me} from './media';
 import axios from 'axios';
  
  import './lightSaber.css';
@@ -266,29 +266,29 @@ useEffect(()=>{
             document.getElementById("git").classList.add("makeVisible"); 
            },700);
           }
-          function handleBrightness(){
+        //   function handleBrightness(){
 
             
-              document.getElementById("mrNav").classList.toggle("darkMode");
-              document.getElementById("theme").classList.toggle("darkMode");
-              document.getElementById("navContainer").classList.toggle("darkMode");
-              document.getElementById("skills").classList.toggle("darkMode");
-              document.getElementById("mySkills").classList.toggle("darkMode");
-               let skillsContainer=document.querySelectorAll(".skills-container");
-               console.log(skillsContainer);
-                 for(let i=0;i<skillsContainer.length;i++){
-                  skillsContainer[i].classList.toggle("darkMode");
-                 }
-                 document.getElementById("projects").classList.toggle("darkMode");
-                 document.getElementById("honed").classList.toggle("darkMode");
-                 document.getElementById("certifications").classList.toggle("darkMode");
-                 document.getElementById("myCerti").classList.toggle("darkMode");
-                 document.querySelector(".navbar-toggler").classList.toggle("darkMode");
-                 document.getElementById("categories").classList.toggle("darkMode");
+        //       document.getElementById("mrNav").classList.toggle("darkMode");
+        //       document.getElementById("theme").classList.toggle("darkMode");
+        //       document.getElementById("navContainer").classList.toggle("darkMode");
+        //       document.getElementById("skills").classList.toggle("darkMode");
+        //       document.getElementById("mySkills").classList.toggle("darkMode");
+        //        let skillsContainer=document.querySelectorAll(".skills-container");
+        //        console.log(skillsContainer);
+        //          for(let i=0;i<skillsContainer.length;i++){
+        //           skillsContainer[i].classList.toggle("darkMode");
+        //          }
+        //          document.getElementById("projects").classList.toggle("darkMode");
+        //          document.getElementById("honed").classList.toggle("darkMode");
+        //          document.getElementById("certifications").classList.toggle("darkMode");
+        //          document.getElementById("myCerti").classList.toggle("darkMode");
+        //          document.querySelector(".navbar-toggler").classList.toggle("darkMode");
+        //          document.getElementById("categories").classList.toggle("darkMode");
 
             
-             setBright(!bright);
-          }
+        //      setBright(!bright);
+        //   }
         async function  handleLevel(sub){
           let id=`percent${sub}`;
         if(Number(document.getElementById(id).innerHTML)!== individuals[sub].lvl && document.getElementById(id).innerHTML===""){
@@ -333,6 +333,7 @@ const textLeave = () =>{ setCursorVariant("default");
 const  techStack=()=>setCursorVariant("techStack");
 const themeEnter=()=>setCursorVariant("theme");
 const navLinks=()=>setCursorVariant("navLinks");
+ 
  
 
     return (<div  id="myApp" className={toggleValue?"darkGradient":"devRow"} >  
@@ -693,13 +694,62 @@ const navLinks=()=>setCursorVariant("navLinks");
 
 
         </section>
+    <div class="modal  modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-3" id="exampleModalLabel">About Aravind</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+      
+                       <div className="row align-items-center">
+                        <div className="aboutMe col-5">
+   
+     <p>Transitioned into Software after Graduating a different stream. I stumbled upon 'Frontend Technologies' and they have captivated me with how diverse the logic can be. Endless possibilities of the interfaces that could  be created.</p>
+     <p>
+     
+     Through intense effort of 6 months I became a Web Developer. Presently, working for G-Rank Digital Services Private Limited. </p>
+     <p>And I feel like this is just the beginning of my journey.</p>
+
+       <p>I am very open to conversations. Hit me up anytime.</p>
+      </div>
+                       
+                        <div className="meCont col-7">
+          <img src={me} alt="Its Me" className="img-fluid"></img>
+     
+     </div>
+     </div>
+     
+      </div>
+      <div class="modal-footer">
+         
+      </div>
+    </div>
+  </div>
+</div>
+
+       
+
 
         <section className="position-relative lightSaber">
        <div className="container">
-         <div className="col-6 guideToLight">
+         <div className="row">
+         <div className="col-lg-6 col-md-6 guideToLight">
           <h1>Hard to see visitor? Activate Noble Phantasom and brighten the sky.</h1>
           <h4>I feel the energy from here  </h4>
          </div>
+         <div className="col-lg-6 col-md-6 moreMe">
+                   
+                   <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal">More About Me</button>
+
+ 
+ 
+
+
+         </div>
+         </div>
+         
        </div>
                           
           <div class="tooltip">
