@@ -1422,6 +1422,13 @@ background-color: #212529;
    #categories .subList{
      font-size: 18px;
   }
+  .lightsaber__light {
+    position: absolute;
+    width: 80%;
+    left: -70px !important;
+    top: 14px ;
+    height: 9px;
+}
       
      
 }
