@@ -683,14 +683,16 @@ background-color: rgb(222, 154, 66);
 
 }
 .projectList{
-    border-top: 1px solid rgba(255, 255, 255, 0.511) ;
+    border-top: 1px solid rgb(222, 154, 66) ;
      
-  border-bottom: 8px solid rgba(255, 255, 255, 0.511);
+  border-bottom: 8px solid rgb(222, 154, 66);
+ 
  
   color: white;
 }
 .projectList img{
   height: 340px;
+   
 }
 .blendMode{
    mix-blend-mode: color-dodge;
@@ -1340,6 +1342,29 @@ background-color: #212529;
       .projectList img{
   height: 250px;
 }
+ .statusList li::before {
+  left: 0;
+  width: 10px;
+  height: 10px;
+ }
+ .statusList{
+  padding: 0;
+ }
+ #categories .headUL{
+  padding-left:  8px;
+  list-style-type: none;
+  
+ }
+  #categories .headUL .headList{
+    font-size: 16px;
+  }
+  #categories .subUL{
+    padding-left: 15px;
+    list-style-type: none;
+  }
+   #categories .subList{
+     font-size: 18px;
+  }
       
      
 }

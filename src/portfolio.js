@@ -466,7 +466,8 @@ const navLinks=()=>setCursorVariant("navLinks");
           <div>
                <ul className="workingList  balloons">
                                   <li  >
-                                    <div class="icon"><img src={brain} alt="brainImage" className="img-fluid brainImg balloonImg"></img> </div>
+                                    <div class="icon"><img src={brain} alt="brainImage" className="img-fluid brainImg balloonImg"></img>
+                                     </div>
                                        
                                     
                                     <div class="title">Tech Stack   </div>
@@ -488,12 +489,12 @@ const navLinks=()=>setCursorVariant("navLinks");
           <div className="row     ">
            {/*skills.map((item,index)=> <div className="col-lg-8 col-md-10 col-sm-12 col-xs-12 mx-auto p-2 d-flex justify-content-around my-1 skills-container" key={index} ><div className="col-2 skills-icons"  >{item.icons}</div><div className="col-4 skill-type"  ><h4>{item.Language}</h4></div><div  className="col-4 bar"><div className="track" style={{width:`${item.level}%`}}></div></div></div>)*/}
              <div className=" col-12  text-start      rounded" id="categories">
-              <ul className="row     ">
+              <ul className="row    headUL ">
               
               
                {category.map((item,index)=>
                   <li key={ index} className="       my-3 headList">{"< "+item+" />"}
-                   <ul>
+                   <ul className="subUL">
                     {subCat[item].map((sub,subIndex)=><li key={subIndex} className="subList col-lg-12 col-md-12 col-sm-12 col-11   my-3" ><div className="d-flex position-relative   align-items-center" id="subContainer"><span id={`lan${sub}`}>{sub} {individuals[sub].icon}</span> <span id={`percent${sub}`} className="percentText text-end   position-absolute"></span><span className="skillLevel position-absolute bottom-0 start-0" id={`line${sub}`}></span></div></li>)}
                    </ul>
                   </li>
