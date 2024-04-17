@@ -1,13 +1,12 @@
 {
   "files": {
-    "main.css": "/react-portfolio/static/css/main.2f1b64cf.css",
-    "main.js": "/react-portfolio/static/js/main.0f281447.js",
+    "main.css": "/react-portfolio/static/css/main.4dd5faca.css",
+    "main.js": "/react-portfolio/static/js/main.d8797d10.js",
     "static/media/Shorts.mp4": "/react-portfolio/static/media/Shorts.b4bc6892577b27797ac8.mp4",
     "static/media/quizAppDemo.mp4": "/react-portfolio/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/react-portfolio/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
     "static/media/Infotrixs.png": "/react-portfolio/static/media/Infotrixs.9ffd09151a8f8e0b2adf.png",
     "static/media/roxiler2.png": "/react-portfolio/static/media/roxiler2.92f210c92be79e96d50a.png",
-    "static/media/pp.jpg": "/react-portfolio/static/media/pp.687ce5aa4cf97aa9e20c.jpg",
     "static/media/diceGame.png": "/react-portfolio/static/media/diceGame.b696c0a368a7fae03380.png",
     "static/media/pic1.png": "/react-portfolio/static/media/pic1.7074158f30e7a7991d8e.png",
     "static/media/pic3.png": "/react-portfolio/static/media/pic3.3118360ef05e87ac3901.png",
@@ -20,15 +19,15 @@
     "static/media/roxiler.png": "/react-portfolio/static/media/roxiler.6c7a0f5a92c1dbafe54a.png",
     "static/media/brain (1).png": "/react-portfolio/static/media/brain (1).e16cb1e2085c434c2556.png",
     "static/media/certificate.png": "/react-portfolio/static/media/certificate.c533cb8078aa56aa39c6.png",
+    "static/media/pp2.jpg": "/react-portfolio/static/media/pp2.75d54ba26b6d7a922c25.jpg",
     "static/media/developer.png": "/react-portfolio/static/media/developer.5d687b9c7b99d9c296f3.png",
     "static/media/project-management.png": "/react-portfolio/static/media/project-management.10b312ee9602c2febbbf.png",
     "index.html": "/react-portfolio/index.html",
-    "static/media/wave-haikei.svg": "/react-portfolio/static/media/wave-haikei.1ae4719c69b65dda483e.svg",
-    "main.2f1b64cf.css.map": "/react-portfolio/static/css/main.2f1b64cf.css.map",
-    "main.0f281447.js.map": "/react-portfolio/static/js/main.0f281447.js.map"
+    "main.4dd5faca.css.map": "/react-portfolio/static/css/main.4dd5faca.css.map",
+    "main.d8797d10.js.map": "/react-portfolio/static/js/main.d8797d10.js.map"
   },
   "entrypoints": [
-    "static/css/main.2f1b64cf.css",
-    "static/js/main.0f281447.js"
+    "static/css/main.4dd5faca.css",
+    "static/js/main.d8797d10.js"
   ]
 }
