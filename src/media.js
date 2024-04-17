@@ -21,7 +21,7 @@ import certification from './images/certificate.png';
 import lines from './images/Animation - 1713081040437.json';
 import thickLines from './images/Animation - 1713082771765 (1).json';
 import energy from './images/right.png';
-import me from './images/pp.jpg';
+import me from './images/pp2.jpg';
 
 
 export {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,infotrixs,Roxiler,Roxiler1,Roxiler2,Roxiler3,shorts,dev,brain,project,certification,lines,thickLines,energy,me};

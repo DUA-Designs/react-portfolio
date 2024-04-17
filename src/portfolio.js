@@ -54,6 +54,7 @@ export function Main(){
   const [quote,setQuote]=useState([]);
   const [bright,setBright]=useState(false);
   const [processing,setProcessing]=useState(false); 
+ 
    
   const [toggleValue,setToggleValue]=useState(true);
 
@@ -336,7 +337,7 @@ const navLinks=()=>setCursorVariant("navLinks");
  
  
 
-    return (<div  id="myApp" className={toggleValue?"darkGradient":"devRow"} >  
+    return ( <div  id="myApp" className={toggleValue?"darkGradient":"devRow"} >  
     < motion.div className="cursor"   style={{
     translateX: cursorX,
     translateY: cursorY,
@@ -344,8 +345,8 @@ const navLinks=()=>setCursorVariant("navLinks");
        animate={cursorVariant} />
   
     
-    <nav className="navbar navbar-expand-lg" id="mrNav">
-        <div className="container-fluid d-flex  position-relative  " id="navContainer">
+    <nav className="navbar navbar-expand-lg   " id="mrNav">
+        <div className="container  d-flex  position-relative  " id="navContainer">
           <a className="navbar-brand col-1" href="https://dua-designs.github.io/react-portfolio/"  onMouseEnter={textEnter} onMouseLeave={textLeave}>   D.U.A <span className="sepe">|</span><span className="desi"> DESIGNS</span></a>
           {/* <button className=" btn " id="theme" onClick={handleBrightness} title={bright?"Switch to Lightmode":"Switch To Darkmode"}  onMouseEnter={themeEnter} onMouseLeave={textLeave}>{bright?<i className="fi fi-bs-brightness"></i>:<i className="fa-solid fa-moon"></i>}</button> */}
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -379,6 +380,7 @@ const navLinks=()=>setCursorVariant("navLinks");
         </div>
       </nav>
     
+ 
 
       <section className="container py-5 my-2 position-relative rounded     " id="about">
 
@@ -641,13 +643,13 @@ const navLinks=()=>setCursorVariant("navLinks");
          
     </section>
     <footer >
-        <section id="product" className="  py-5">
+        <section id="product" className="   ">
             <div className="container  position-relative" >
                
-            <div className="row p-3 position-absolute  " id="git"  >
+            <div className="row p-2   " id="git"  >
                
                 
-            <div className="col-10 mx-auto p-2 py-4"     >
+            <div className="col-10 mx-auto p-2 py-2"     >
               <form method="post"  onSubmit={(event)=>sendEmail(event)}    id="contactForm" >
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
@@ -686,7 +688,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                    <div className="col-10 mx-auto p-2" id="prod">
                     <h2 >Let's talk about your product</h2>
                     <em>How do you take your protien shake?</em> <br/>
-                    <button className="btn   m-2    " id="touchbtn" onClick={detailsInput}>Get in touch now</button> 
+                    <button className="btn  btn-dark  m-2    " id="touchbtn" onClick={detailsInput}>Get in touch now</button> 
                 </div>
 
                 </div>
@@ -703,23 +705,21 @@ const navLinks=()=>setCursorVariant("navLinks");
       </div>
       <div class="modal-body">
       
-                       <div className="row align-items-center">
-                        <div className="aboutMe col-5">
+                      <div className="col-12" class="myImage"><img src={me} alt="Its Me" className="img-fluid"  ></img></div>
    
-     <p>Transitioned into Software after Graduating a different stream. I stumbled upon 'Frontend Technologies' and they have captivated me with how diverse the logic can be. Endless possibilities of the interfaces that could  be created.</p>
+   <div className="aboutMeParas">  <p>Transitioned into Software after Graduating a different stream. I stumbled upon 'Frontend Technologies' and they have captivated me with how diverse the logic can be. Endless possibilities of the interfaces that could  be created.</p>
      <p>
      
-     Through intense effort of 6 months I became a Web Developer. Presently, working for G-Rank Digital Services Private Limited. </p>
-     <p>And I feel like this is just the beginning of my journey.</p>
+     Through intense effort of 6 months I became a Web Developer. Presently, working for <br/>  <a href="https://www.grank.co.in/" target="_blank" rel="noreferrer">G-Rank Digital Services Private Limited.</a>  </p>
+    
 
-       <p>I am very open to conversations. Hit me up anytime.</p>
-      </div>
+       <p>I am very open to conversations. Hit me up anytime.</p></div>
+       
                        
-                        <div className="meCont col-7">
-          <img src={me} alt="Its Me" className="img-fluid"></img>
+                 
+         
      
-     </div>
-     </div>
+     
      
       </div>
       <div class="modal-footer">
@@ -869,10 +869,10 @@ const navLinks=()=>setCursorVariant("navLinks");
             <div className="col ">
              
             </div>
-            <div className="myLinks  col-lg-3 col-md-4 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 my-3">
-              <a href="#twitter" target="blank"><i className="fa-brands fa-twitter  rounded"></i></a>
+            <div className="myLinks  col-lg-1 col-md-1 col-sm-5 col-xs-10  d-flex justify-content-around align-items-center py-2 my-3">
+              {/* <a href="#twitter" target="blank"><i className="fa-brands fa-twitter  rounded"></i></a>
               <a href="https://www.facebook.com/dualifts/" target="blank"><i className="fa-brands fa-facebook-f   rounded"></i></a>
-              <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a>
+              <a href="#instagram"><i className="fa-brands fa-instagram   rounded"></i></a> */}
               <a href="https://github.com/DUA-Designs" target="blank"><i className="fa-brands fa-github   rounded"></i> </a>
               <a href="https://www.linkedin.com/in/uday-aravind-dasari-385636225/" target="blank"><i className="fa-brands fa-linkedin-in   rounded"></i></a>
              
