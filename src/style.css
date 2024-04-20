@@ -474,15 +474,18 @@ background:white;
  
 
 #about{
- 
-    background-position: top;
-    background-size: cover;
+  
     color:white;
       margin-top: -4px;
     
     
            position: relative;
            overflow: hidden;
+           z-index: 10;
+ 
+ 
+ 
+ 
  
  
    
@@ -491,7 +494,7 @@ background:white;
        /* background: linear-gradient(90deg, #24C6DC 10%, #514A9D 90%); */
     
 }
- 
+  
 /* #about::after {
    content: "";
   position: absolute;
@@ -567,13 +570,13 @@ background:white;
      
 }
 #skills{
-    text-align: center;
-   
-  
-   
-
-    
+    text-align: center;  
 }
+
+ /* .currentStatus{
+    backdrop-filter: blur(5.7px);
+-webkit-backdrop-filter: blur(4.7px);
+  } */
  .balloons.workingList .icon{
       width: 130px;
       height: 130px;

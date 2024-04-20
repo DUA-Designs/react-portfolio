@@ -5,10 +5,14 @@ import  {dicegame,weatherAppDemo,quizAppDemo,DD,Pic1,Pic2,Pic3,Pic4,Pic5,Pic6,in
 import axios from 'axios';
  
  import './lightSaber.css';
+import Particles from "react-tsparticles";
+//import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
+import { loadSlim } from "tsparticles-slim"; // if you are going to use `loadSlim`, install the "tsparticles-slim" package too.
  
  import { Player, Controls } from '@lottiefiles/react-lottie-player';
 import Lottie from 'react-lottie';
 import { motion,  useMotionValue } from "framer-motion"
+import { ParticlesComp } from "./particles";
  
  
  const defaultOptions = {
@@ -343,6 +347,7 @@ const navLinks=()=>setCursorVariant("navLinks");
     translateY: cursorY,
   }}   variants={variants}
        animate={cursorVariant} />
+       <ParticlesComp   />
   
     
     <nav className="navbar navbar-expand-lg   " id="mrNav">
@@ -422,7 +427,7 @@ const navLinks=()=>setCursorVariant("navLinks");
        
 
     
-  <section className="container    py-4">
+  <section className="container    py-4 currentStatus">
 
                   
             
