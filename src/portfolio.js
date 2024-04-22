@@ -56,7 +56,7 @@ import { ParticlesComp } from "./particles";
 export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
-  const [bright,setBright]=useState(false);
+  
   const [processing,setProcessing]=useState(false); 
  
    
