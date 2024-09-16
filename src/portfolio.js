@@ -211,8 +211,10 @@ useEffect(()=>{
 
             
             setProcessing(true);
-console.log(document.getElementById("inputinPublic").value);
-  
+ 
+
+  console.log(document.getElementById("inputinPublic").value);
+ 
       let recaptchaResult= await axios.get(`https://portfoliobackend-mmkw.onrender.com/g-recaptcha-validation?token=${document.getElementById("inputinPublic").value}`);
          
  
