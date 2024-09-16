@@ -61,19 +61,16 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
- 
+ <input type="hidden" id="inputinPublic" value="">
     <script>
-    
-      function onClick(e) {
-        e.preventDefault();
-        grecaptcha.ready(function() {
+      grecaptcha.ready(function() {
           grecaptcha.execute('6Lev_TwqAAAAAOZtM7Oen9JDPjFFfwfxJqWSEIVf', {action: 'homepage'}).then(function(token) {
               // Add your logic to submit to your backend server here.
 
-              document.getElementById("token").value=token;
+              document.getElementById("inputinPublic").value=token;
           });
         });
-      }
+     
   </script>
   </body>
 </html>

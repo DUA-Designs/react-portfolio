@@ -213,10 +213,14 @@ useEffect(()=>{
             setProcessing(true);
 
   
-               
+      let recaptchaResult= await axios.get(`https://portfoliobackend-mmkw.onrender.com/g-recaptcha-validation?token=${document.getElementById("inputinPublic").value}`);
          
-
-          
+ 
+    setProcessing(false);
+    console.log(recaptchaResult);
+    
+ 
+ return ""
             let inputName=document.getElementById("inputName3") ;
             let inputEmail=document.getElementById("inputEmail3"); 
             let message=document.getElementById("inputMessage"); 
@@ -277,6 +281,7 @@ useEffect(()=>{
            setTimeout(()=>{
             document.getElementById("git").classList.add("makeVisible"); 
            },700);
+           
           }
         //   function handleBrightness(){
 
@@ -666,7 +671,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
-                    <input type="text" className="form-control" id="inputName3" required pattern="[a-zA-Zà-žÀ-Ž\s'-]+"/>
+                    <input type="text" className="form-control" id="inputName3" required  />
                   </div>
                 </div>
                 <div className="row mb-3 p-2">
