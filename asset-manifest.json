@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.6aaf95f1.css",
-    "main.js": "/static/js/main.42b52436.js",
+    "main.css": "/static/css/main.e00fd020.css",
+    "main.js": "/static/js/main.a1e9dd32.js",
     "static/media/Shorts.mp4": "/static/media/Shorts.b4bc6892577b27797ac8.mp4",
     "static/media/quizAppDemo.mp4": "/static/media/quizAppDemo.7e20f4d40f4009bd466e.mp4",
     "static/media/weatherappDemo.mp4": "/static/media/weatherappDemo.8bc43cf8cbefd08b8148.mp4",
@@ -23,11 +23,11 @@
     "static/media/developer.webp": "/static/media/developer.40254d384375a1446821.webp",
     "static/media/diceGame.webp": "/static/media/diceGame.5d6ae134f4bfb1420ccf.webp",
     "index.html": "/index.html",
-    "main.6aaf95f1.css.map": "/static/css/main.6aaf95f1.css.map",
-    "main.42b52436.js.map": "/static/js/main.42b52436.js.map"
+    "main.e00fd020.css.map": "/static/css/main.e00fd020.css.map",
+    "main.a1e9dd32.js.map": "/static/js/main.a1e9dd32.js.map"
   },
   "entrypoints": [
-    "static/css/main.6aaf95f1.css",
-    "static/js/main.42b52436.js"
+    "static/css/main.e00fd020.css",
+    "static/js/main.a1e9dd32.js"
   ]
 }
