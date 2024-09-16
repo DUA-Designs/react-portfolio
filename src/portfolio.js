@@ -14,7 +14,8 @@ import Lottie from 'react-lottie';
 import { motion,  useMotionValue } from "framer-motion"
 import { ParticlesComp } from "./particles";
  
- 
+import { GoogleReCaptchaProvider, GoogleReCaptcha } from "react-google-recaptcha-v3";
+
  const defaultOptions = {
       loop: true,
       autoplay: true,
@@ -56,6 +57,7 @@ import { ParticlesComp } from "./particles";
 export function Main(){
   const [quoteCheck,setQuoteCheck]=useState(0);
   const [quote,setQuote]=useState([]);
+ 
   
   const [processing,setProcessing]=useState(false); 
  
@@ -200,7 +202,7 @@ useEffect(()=>{
  
 } ,[]);
 
-
+ 
  
 
       async  function sendEmail(e){
@@ -209,6 +211,8 @@ useEffect(()=>{
 
             
             setProcessing(true);
+
+  
                
          
 
@@ -256,6 +260,9 @@ useEffect(()=>{
             resp.classList.toggle("showMe");
           },5000);
           setProcessing(false);
+
+
+
             
         }
           function detailsInput(){
@@ -659,7 +666,7 @@ const navLinks=()=>setCursorVariant("navLinks");
                 <div className="row mb-3  p-2">
                   <label className="col-sm-4 col-form-label">Name</label>
                   <div className="col-sm-8">
-                    <input type="text" className="form-control" id="inputName3" required />
+                    <input type="text" className="form-control" id="inputName3" required pattern="[a-zA-Zà-žÀ-Ž\s'-]+"/>
                   </div>
                 </div>
                 <div className="row mb-3 p-2">
@@ -674,7 +681,17 @@ const navLinks=()=>setCursorVariant("navLinks");
                    <textarea name="" id="inputMessage" cols="30" rows="3" className="form-control" required></textarea>
                   </div>
                 </div>
-               
+                <input type="hidden" value={""} id="token"></input>
+                  {/* <GoogleReCaptchaProvider reCaptchaKey={"6Lev_TwqAAAAAOZtM7Oen9JDPjFFfwfxJqWSEIVf"}>
+          <GoogleReCaptcha
+            className="google-recaptcha-custom-class"
+            onVerify={setTokenFunc}
+            refreshReCaptcha={false}
+          />
+        </GoogleReCaptchaProvider> */}
+
+            
+
                 
                  
                 <button   className="btn   d-block w-25 mx-auto g-recaptcha" type="submit" id="Submitme" 

@@ -14,6 +14,12 @@
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-thin-straight/css/uicons-thin-straight.css'>
   <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.3.0/uicons-bold-rounded/css/uicons-bold-rounded.css'>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Lev_TwqAAAAAOZtM7Oen9JDPjFFfwfxJqWSEIVf"></script>
+ <script>
+  function c_validation() {
+         if (grecaptcha.getResponse() == "") { alert("check roboto"); return false }
+         };
+ </script>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
     <meta
@@ -56,5 +62,18 @@
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
  
+    <script>
+    
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6Lev_TwqAAAAAOZtM7Oen9JDPjFFfwfxJqWSEIVf', {action: 'homepage'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+
+              document.getElementById("token").value=token;
+          });
+        });
+      }
+  </script>
   </body>
 </html>
